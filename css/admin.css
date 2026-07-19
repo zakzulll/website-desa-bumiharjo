@@ -1,0 +1,46 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* Pengaturan Sidebar */
+.sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    padding: 12px 20px;
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 0 25px 25px 0;
+    margin-right: 20px;
+}
+
+/* Margin konten agar tidak tertutup sidebar */
+.main-content {
+    margin-left: 250px;
+}
+
+/* Desain Kartu */
+.card {
+    border: none;
+    border-radius: 12px;
+}
+
+/* Membuat teks di dashboard admin juga rata kanan-kiri */
+#teks-sejarah, #teks-visi, #teks-misi {
+    text-align: left;
+}
