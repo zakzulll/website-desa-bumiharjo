@@ -262,3 +262,106 @@ footer p {
 .btn-top:hover {
   background: #146c43;
 }
+
+/* TATA LETAK UTAMA KARTU */
+.custom-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* BAGIAN GAMBAR DAN OVERLAY TEKS (TAMPILAN NORMAL) */
+.card-img-container {
+  position: relative;
+  height: 200px; /* Sesuaikan tinggi gambar kartu */
+  overflow: hidden;
+}
+
+.card-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-img-overlay-custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Efek gelap transparan agar teks putih terlihat jelas seperti di gambar */
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.65));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Memosisikan teks di bagian bawah gambar */
+  padding: 16px;
+}
+
+.card-img-overlay-custom h5 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* BAGIAN DESKRIPSI DI BAWAH GAMBAR */
+.custom-card .card-body {
+  padding: 24px 16px;
+  background-color: #ffffff;
+}
+
+.custom-card .card-body p {
+  color: #2d3748;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* OVERLAY HOVER PUTIH PENUH (TAMPILAN SAAT KURSOR DIARAHKAN) */
+.card-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* Mengubah seluruh kartu menjadi putih polos seperti di gambar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px; /* Jarak antar tombol */
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 10;
+}
+
+/* Memicu Perubahan Saat Hover */
+.custom-card:hover .card-hover-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* TOMBOL HIJAU DI DALAM HOVER */
+.btn-hover-green {
+  background-color: #2b6c1b; /* Warna hijau tua organik sesuai gambar */
+  color: #ffffff !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-hover-green:hover {
+  background-color: #1e4b13;
+  transform: scale(1.03);
+}
