@@ -1,0 +1,127 @@
+/* ==========================================
+   STYLE GLOBAL ADMIN DESA BUMIHARJO
+   File: css/admin.css
+   ========================================== */
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+}
+
+/* TATA LETAK UTAMA */
+#wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* SIDEBAR */
+#sidebar {
+    width: 260px;
+    background-color: #538863;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 1050;
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-link {
+    color: #e2e8f0;
+    padding: 12px 20px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.nav-link:hover, 
+.nav-link.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+}
+
+/* SUB-MENU PUSAT INFORMASI */
+.sub-menu {
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    margin-left: 30px;
+    padding-left: 0;
+}
+
+.sub-menu .nav-link {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.sub-menu .nav-link::before {
+    content: "— ";
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* KONTEN UTAMA & TOP NAVBAR */
+#content-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.top-navbar {
+    background-color: #ffffff;
+    height: 70px;
+    min-height: 70px; 
+    flex-shrink: 0; 
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.chevron-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+a[data-bs-toggle="collapse"][aria-expanded="true"] .chevron-icon {
+    transform: rotate(90deg);
+}
+
+/* BACKDROP OVERLAY UNTUK MOBILE */
+#sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1040;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* RESPONSIVE STYLES (MOBILE & TABLET) */
+@media (max-width: 991.98px) {
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: -260px;
+        height: 100vh;
+    }
+
+    #sidebar.show {
+        left: 0;
+    }
+
+    #sidebar-overlay.show {
+        display: block;
+    }
+}

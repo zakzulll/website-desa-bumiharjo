@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UMKM Desa | PRODUSI</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-success fixed-top shadow-sm"
+    >
+      <div class="container">
+        <!-- Logo & Nama Desa Pojok Kiri -->
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="index.html"
+        >
+          <img
+            src="assets/img/logo-klaten.png"
+            alt="Logo Kabupaten Klaten"
+            height="42"
+            class="d-inline-block align-text-top"
+          />
+          <div class="d-flex flex-column">
+            <span class="fw-bold text-uppercase lh-1 fs-5">Desa Bumiharjo</span>
+            <span
+              class="text-white-50"
+              style="font-size: 0.68rem; letter-spacing: 0.5px"
+              >KECAMATAN KEMALANG</span
+            >
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarProdusi"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarProdusi">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Beranda</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="profil.html">Profil</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="peta.html">Peta</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="fasilitas.html">Fasilitas</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="potensi.html">Potensi</a>
+            </li>
+
+            <!-- MENU DROPDOWN INFORMASI -->
+            <!-- Tambahkan class 'active' pada tag a pembungkus jika sedang berada di salah satu submenunya -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="informasiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Informasi
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end border-0 shadow" aria-labelledby="informasiDropdown">
+                <li><a class="dropdown-item active bg-success" href="umkm.html">UMKM</a></li>
+                <li><a class="dropdown-item" href="informasi.html">Artikel & Galeri</a></li>
+                <!-- Class active diletakkan di submenu APBDesa karena ini file apbdesa.html -->
+                <li><a class="dropdown-item" href="apbdesa.html">APBDesa</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="kontak.html">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+    <section
+      style="padding-top: 150px; padding-bottom: 80px; background: #f8f9fa"
+    >
+      <div class="container text-center">
+        <h1 class="fw-bold text-success">UMKM Desa Bumiharjo</h1>
+
+        <p>
+          Katalog digital usaha mikro, kecil, dan menengah masyarakat Desa
+          Bumiharjo
+        </p>
+      </div>
+    </section>
+
+    <!-- STATISTIK -->
+    <section class="fade-up">
+      <div class="container">
+        <div class="section-title">
+          <h2>Statistik UMKM</h2>
+
+          <p>Data dapat diperbarui sesuai hasil pendataan</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="stat-box">
+              <h3 class="counter">10</h3>
+
+              <p>Total UMKM</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="stat-box">
+              <h3 class="counter">10</h3>
+
+              <p>Kuliner</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="stat-box">
+              <h3 class="counter">0</h3>
+
+              <p>Kerajinan</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="stat-box">
+              <h3 class="counter">0</h3>
+
+              <p>Jasa</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KATALOG UMKM -->
+    <section class="bg-light">
+      <div class="container">
+        <div class="section-title">
+          <h2>Katalog UMKM</h2>
+          <p>Daftar UMKM yang ada di Desa Bumiharjo</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- UMKM 1 -->
+          <div class="col-lg-4">
+            <div class="card custom-card h-100">
+              <!-- Tampilan Normal Bagian Atas: Gambar + Judul & Badge -->
+              <div class="card-img-container">
+                <img src="assets/img/keripik-wikky.jpg" alt="Keripik Wikky" />
+                <div class="card-img-overlay-custom">
+                  <h5>Keripik Wikky</h5>
+                  <div>
+                    <span class="badge bg-success px-2 py-15">Kuliner</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Tampilan Normal Bagian Bawah: Deskripsi -->
+              <div class="card-body">
+                <p>Produksi aneka kripik.</p>
+              </div>
+              <!-- Tampilan Hover: Putih Polos + 2 Tombol Berdampingan -->
+              <div class="card-hover-overlay">
+                <a
+                  href="https://drive.google.com/file/d/1un6Km3MMhozKQ4YUjOI2VBMGah4UaE-Z/view?usp=sharing"
+                  target="_blank"
+                  class="btn-hover-green"
+                  >Daftar Menu</a
+                >
+                <a
+                  href="https://wa.me/6288216095609?text=Halo%20Keripik%20Wikky,%20saya%20ingin%20tahu%20lebih%20lengkap%20mengenai%20produk%20Anda."
+                  target="_blank"
+                  class="btn-hover-green"
+                  >Hubungi via WA</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- UMKM 2 -->
+          <div class="col-lg-4">
+            <div class="card custom-card h-100">
+              <div class="card-img-container">
+                <img src="assets/img/bandini-snack.jpeg" alt="Bandini Snack" />
+                <div class="card-img-overlay-custom">
+                  <h5>Bandini Snack</h5>
+                  <div>
+                    <span class="badge bg-success px-2 py-15"
+                      >Snack Jajanan Pasar</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>Produksi berbagai jajanan pasar.</p>
+              </div>
+              <div class="card-hover-overlay">
+                <a href="#" class="btn-hover-green">Daftar Menu</a>
+                <a
+                  href="https://wa.me/62882006064861?text=Halo%20Bandini%20Snack,%20saya%20ingin%20tahu%20lebih%20lengkap%20mengenai%20produk%20Anda."
+                  target="_blank"
+                  class="btn-hover-green"
+                  >Hubungi via WA</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- UMKM 3 -->
+          <div class="col-lg-4">
+            <div class="card custom-card h-100">
+              <div class="card-img-container">
+                <img src="assets/img/amel-snack.jpeg" alt="Amel Snack" />
+                <div class="card-img-overlay-custom">
+                  <h5>Amel Snack</h5>
+                  <div>
+                    <span class="badge bg-success px-2 py-15"
+                      >Snack Jajanan Pasar</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>Produksi berbagai jajanan pasar.</p>
+              </div>
+              <div class="card-hover-overlay">
+                <a href="#" class="btn-hover-green">Daftar Menu</a>
+                <a
+                  href="https://wa.me/6281392940818?text=Halo%20Amel%20Snack,%20saya%20ingin%20tahu%20lebih%20lengkap%20mengenai%20produk%20Anda."
+                  target="_blank"
+                  class="btn-hover-green"
+                  >Hubungi via WA</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- UMKM 4 -->
+          <div class="col-lg-4">
+            <div class="card custom-card h-100">
+              <div class="card-img-container">
+                <img src="assets/img/alvaro-snack.jpeg" alt="Alvaro Snack" />
+                <div class="card-img-overlay-custom">
+                  <h5>Alvaro Snack</h5>
+                  <div>
+                    <span class="badge bg-success px-2 py-15"
+                      >Snack Jajanan Pasar</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>Produksi berbagai jajanan pasar.</p>
+              </div>
+              <div class="card-hover-overlay">
+                <a href="#" class="btn-hover-green">Daftar Menu</a>
+                <a
+                  href="https://wa.me/6285705754710?text=Halo%20Alvaro%20Snack,%20saya%20ingin%20tahu%20lebih%20lengkap%20mengenai%20produk%20Anda."
+                  target="_blank"
+                  class="btn-hover-green"
+                  >Hubungi via WA</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- UMKM 5 -->
+          <div class="col-lg-4">
+            <div class="card custom-card h-100">
+              <div class="card-img-container">
+                <img
+                  src="assets/img/jajanan-pasar-bu-winarsih.jpg"
+                  alt="Jajanan Pasar Bu Winarsih"
+                />
+                <div class="card-img-overlay-custom">
+                  <h5>Bu Winarsih Snack</h5>
+                  <div>
+                    <span class="badge bg-success px-2 py-15"
+                      >Snack Jajanan Pasar</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>Produksi berbagai jajanan pasar.</p>
+              </div>
+              <div class="card-hover-overlay">
+                <a
+                  href="https://drive.google.com/file/d/1K1UyMf4maJv4R1rxYWv1676uBawFrKWi/view?usp=sharing"
+                  class="btn-hover-green"
+                  >Daftar Menu</a
+                >
+                <a
+                  href="https://wa.me/6287739707588?text=Halo%20Jajanan%20Pasar%20Bu%20Winarsih,%20saya%20ingin%20tahu%20lebih%20lengkap%20mengenai%20produk%20Anda."
+                  target="_blank"
+                  class="btn-hover-green"
+                  >Hubungi via WA</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- UMKM 6 -->
+          <div class="col-lg-4">
+            <div class="card custom-card h-100">
+              <div class="card-img-container">
+                <img
+                  src="assets/img/nasi-bungkus-mbak-sur.jpg"
+                  alt="Nasi Bungkus Mbak Sur"
+                />
+                <div class="card-img-overlay-custom">
+                  <h5>Nasi Bungkus Mbak Sur</h5>
+                  <div>
+                    <span class="badge bg-success px-2 py-15"
+                      >Nasi Bungkus</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>Produksi nasi bungkus dengan berbagai menu.</p>
+              </div>
+              <div class="card-hover-overlay">
+                <a
+                  href="https://drive.google.com/file/d/1Ej5KGGFay0g4iOMI8QANxI69_iFm3jrO/view?usp=sharing"
+                  class="btn-hover-green"
+                  >Daftar Menu</a
+                >
+                <a
+                  href="https://wa.me/6285742202688?text=Halo%20Nasi%20Bungkus%20Mbak%20Sur,%20saya%20ingin%20tahu%20lebih%20lengkap%20mengenai%20produk%20Anda."
+                  target="_blank"
+                  class="btn-hover-green"
+                  >Hubungi via WA</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- UMKM 7 -->
+          <div class="col-lg-4">
+            <div class="card custom-card h-100">
+              <div class="card-img-container">
+                <img
+                  src="assets/img/jajanan-pasar-sayur-bu-min.jpg"
+                  alt="Jajanan Bu Min"
+                />
+                <div class="card-img-overlay-custom">
+                  <h5>Jajanan Pasar & Sayur Bu Min</h5>
+                  <div>
+                    <span class="badge bg-success px-2 py-1 me-1"
+                      >Jajanan pasar</span
+                    >
+                    <span class="badge bg-success px-2 py-1">Sayur Matang</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>Produksi aneka jajanan pasar dan berbagai sayur siap saji.</p>
+              </div>
+              <div class="card-hover-overlay">
+                <a
+                  href="https://drive.google.com/file/d/1ba6ntoWWW8IA2kXBCgJq-9Oa_9vds1Yq/view?usp=sharing"
+                  class="btn-hover-green"
+                  >Daftar Menu</a
+                >
+                <a
+                  href="https://wa.me/6281327291029?text=Halo%20Jajanan%20Bu%20Min,%20saya%20ingin%20tahu%20lebih%20lengkap%20mengenai%20produk%20Anda."
+                  target="_blank"
+                  class="btn-hover-green"
+                  >Hubungi via WA</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- UMKM 8 -->
+          <div class="col-lg-4">
+            <div class="card custom-card h-100">
+              <div class="card-img-container">
+                <img
+                  src="assets/img/nasi-bungkus-bu-giarti.jpg"
+                  alt="Nasi Bungkus Bu Giarti"
+                />
+                <div class="card-img-overlay-custom">
+                  <h5>Nasi Bungkus Bu Giarti</h5>
+                  <div>
+                    <span class="badge bg-success px-2 py-15"
+                      >Nasi Bungkus</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>Produksi nasi bungkus dengan berbagai lauj.</p>
+              </div>
+              <div class="card-hover-overlay">
+                <a
+                  href="https://drive.google.com/file/d/1bdch5wD5Toyp5YwwS5vqB7ydi51t2aZu/view?usp=sharing"
+                  class="btn-hover-green"
+                  >Daftar Menu</a
+                >
+                <a
+                  href="https://wa.me/6288225063135?text=Halo%20Nasi%20Bungkus%20Bu%20Giarti,%20saya%20ingin%20tahu%20lebih%20lengkap%20mengenai%20produk%20Anda."
+                  target="_blank"
+                  class="btn-hover-green"
+                  >Hubungi via WA</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- UMKM 9 -->
+          <div class="col-lg-4">
+            <div class="card custom-card h-100">
+              <div class="card-img-container">
+                <img
+                  src="assets/img/molen-lorek.jpg"
+                  alt="Molen Lorek Mukhlisin"
+                />
+                <div class="card-img-overlay-custom">
+                  <h5>Molen Lorek Mukhlisin</h5>
+                  <div>
+                    <span class="badge bg-success px-2 py-15"
+                      >Jajanan Pasar</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>Produksi molen pisang.</p>
+              </div>
+              <div class="card-hover-overlay">
+                <a
+                  href="https://drive.google.com/file/d/1TdnkGm4VUOHi_gE6LqmMMy2w9_ZKFH-3/view?usp=sharing"
+                  class="btn-hover-green"
+                  >Daftar Menu</a
+                >
+                <a
+                  href="https://wa.me/6285740649519?text=Halo%20Molen%20Lorek%20Mukhlisin,%20saya%20ingin%20tahu%20lebih%20lengkap%20mengenai%20produk%20Anda."
+                  target="_blank"
+                  class="btn-hover-green"
+                  >Hubungi via WA</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- UMKM 10 -->
+          <div class="col-lg-4">
+            <div class="card custom-card h-100">
+              <div class="card-img-container">
+                <img src="assets/img/jajanan-bu-gito.jpg" alt="Bu Gito" />
+                <div class="card-img-overlay-custom">
+                  <h5>Bu Gito Snack</h5>
+                  <div>
+                    <span class="badge bg-success px-2 py-15"
+                      >Jajanan Pasar</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <p>Produksi berbagai jajanan pasar.</p>
+              </div>
+              <div class="card-hover-overlay">
+                <a
+                  href="https://drive.google.com/file/d/1SlPaTIpxByzVU0gVGSMeGS8l3zhC7aC6/view?usp=sharing"
+                  class="btn-hover-green"
+                  >Daftar Menu</a
+                >
+                <a
+                  href="https://wa.me/6285600160706?text=Halo%20Bu%20Gito,%20saya%20ingin%20tahu%20lebih%20lengkap%20mengenai%20produk%20Anda."
+                  target="_blank"
+                  class="btn-hover-green"
+                  >Hubungi via WA</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABEL DATA -->
+    <section class="fade-up">
+      <div class="container">
+        <div class="section-title">
+          <h2>Data UMKM</h2>
+
+          <p>Rekapitulasi pelaku usaha di Desa</p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead class="table-success">
+              <tr>
+                <th>No</th>
+                <th>Nama UMKM</th>
+                <th>Kategori</th>
+                <th>Pemilik</th>
+                <th>Kontak</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Keripik Wikky</td>
+                <td>Keripik</td>
+                <td>Wikky</td>
+                <td>088216095609</td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+                <td>Bandini Snack</td>
+                <td>Snack Jajanan Pasar</td>
+                <td>Bandini</td>
+                <td>0882006064861</td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+                <td>Amel Snack</td>
+                <td>Snack Jajanan Pasar</td>
+                <td>Amel</td>
+                <td>081392940818</td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+                <td>Alvaro Snack</td>
+                <td>Snack Jajanan Pasar</td>
+                <td>Alvaro</td>
+                <td>085705754710</td>
+              </tr>
+
+              <tr>
+                <td>5</td>
+                <td>Bu Winarsih Snack</td>
+                <td>Snack Jajanan Pasar</td>
+                <td>Bu Winarsih</td>
+                <td>087739707588</td>
+              </tr>
+
+              <tr>
+                <td>6</td>
+                <td>Nasi Bungkus Mbak Sur</td>
+                <td>Nasi Bungkus</td>
+                <td>Mbak Sur</td>
+                <td>085742202688</td>
+              </tr>
+
+              <tr>
+                <td>7</td>
+                <td>Jajanan Bu Min</td>
+                <td>Snack Jajanan Pasar</td>
+                <td>Bu Min</td>
+                <td>081327291029</td>
+              </tr>
+
+              <tr>
+                <td>8</td>
+                <td>Nasi Bungkus Bu Giarti</td>
+                <td>Nasi Bungkus</td>
+                <td>Bu Giarti</td>
+                <td>088225063135</td>
+              </tr>
+
+              <tr>
+                <td>9</td>
+                <td>Molen Lorek Mukhlisin</td>
+                <td>Snack Jajanan Pasar</td>
+                <td>Mukhlisin</td>
+                <td>085740649519</td>
+              </tr>
+
+              <tr>
+                <td>10</td>
+                <td>Bu Gito Snack</td>
+                <td>Snack Jajanan Pasar</td>
+                <td>Bu Gito</td>
+                <td>085600160706</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="mt-3">
+              <small class="d-block text-white-50 mb-1"
+                >Dikembangkan oleh Kolaborasi:</small
+              >
+              <small class="fw-semibold d-block">
+                • UPN "Veteran" Yogyakarta<br />
+                • Universitas Gadjah Mada
+              </small>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Alamat</h5>
+
+            <p>
+              Glonggong<br />
+              Bumiharjo, Kecamatan Kemalang<br />
+              Kabupaten Klaten, Jawa Tengah 57484
+            </p>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Kontak</h5>
+
+            <p>+62 856-4304-3970 (Pak Tuwuh)</p>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="text-center">© 2026</div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <button id="btnTop" class="btn-top">↑</button>
+    <script src="js/script.js"></script>
+  </body>
+</html>

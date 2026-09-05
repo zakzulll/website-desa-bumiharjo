@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Profil desa | PRODUSI</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- CSS KHUSUS STRUKTUR ORGANISASI (PRESISI TERKUNCI) -->
+    <style>
+      :root {
+        --green-header: #bcc038;
+        --pink-header: #e35084;
+        --border-dark: #222222;
+        --line-color: #222222;
+      }
+
+      .board-container {
+        background-color: #ffffff;
+        border: 2px solid #888;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        overflow-x: auto;
+      }
+
+      .board-header {
+        background-color: var(--green-header);
+        border: 2px solid var(--border-dark);
+        border-radius: 20px;
+        padding: 10px 20px;
+        margin-bottom: 25px;
+      }
+
+      .org-wrapper {
+        min-width: 1050px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+      }
+
+      /* KARTU JABATAN */
+      .org-card {
+        border: 2px solid var(--border-dark);
+        background-color: #ffffff;
+        width: 135px;
+        text-align: center;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 2;
+        transition:
+          transform 0.2s,
+          opacity 0.2s;
+      }
+
+      .org-card:hover {
+        transform: translateY(-2px);
+      }
+
+      .org-card-title {
+        font-size: 0.7rem;
+        font-weight: bold;
+        padding: 4px 2px;
+        text-transform: uppercase;
+        border-bottom: 2px solid var(--border-dark);
+      }
+
+      .org-card-title.bg-green {
+        background-color: var(--green-header);
+        color: #000;
+      }
+
+      .org-card-title.bg-pink {
+        background-color: var(--pink-header);
+        color: #fff;
+      }
+
+      .org-card-name {
+        padding: 6px 4px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        min-height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #222;
+      }
+
+      /* TATA LETAK TIER TENGAH (3 KOLOM SIMETRIS) */
+      .middle-columns {
+        display: flex;
+        width: 100%;
+        position: relative;
+      }
+
+      .col-kasie {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+
+      .col-trunk {
+        width: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+
+      .col-sekdes {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+
+      /* GARIS HORIZONTAL UTAMA DARI KASIE KE SEKDES */
+      .col-kasie-line-top {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 50%;
+        height: 2px;
+        background-color: var(--line-color);
+      }
+
+      .col-trunk-line-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: var(--line-color);
+      }
+
+      .col-sekdes-line-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 50%;
+        height: 2px;
+        background-color: var(--line-color);
+      }
+
+      /* SUB-TREE (PERCABANGAN KASIE / KAUR / KADUSUN) */
+      .tree-row {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .tree-col {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+
+      .tree-col::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        height: 2px;
+        background-color: var(--line-color);
+        width: 100%;
+      }
+
+      .tree-col:first-child::before {
+        left: 50%;
+        width: 50%;
+      }
+
+      .tree-col:last-child::before {
+        left: 0;
+        width: 50%;
+      }
+
+      .tree-col::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 2px;
+        height: 15px;
+        background-color: var(--line-color);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .v-line {
+        width: 2px;
+        background-color: var(--line-color);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-success fixed-top shadow-sm"
+    >
+      <div class="container">
+        <!-- Logo & Nama Desa Pojok Kiri -->
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="index.html"
+        >
+          <img
+            src="assets/img/logo-klaten.png"
+            alt="Logo Kabupaten Klaten"
+            height="42"
+            class="d-inline-block align-text-top"
+          />
+          <div class="d-flex flex-column">
+            <span class="fw-bold text-uppercase lh-1 fs-5">Desa Bumiharjo</span>
+            <span
+              class="text-white-50"
+              style="font-size: 0.68rem; letter-spacing: 0.5px"
+              >KECAMATAN KEMALANG</span
+            >
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarProdusi"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarProdusi">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Beranda</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="profil.html">Profil</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="peta.html">Peta</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="fasilitas.html">Fasilitas</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="potensi.html">Potensi</a>
+            </li>
+
+            <!-- MENU DROPDOWN INFORMASI -->
+            <!-- Tambahkan class 'active' pada tag a pembungkus jika sedang berada di salah satu submenunya -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="informasiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Informasi
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end border-0 shadow" aria-labelledby="informasiDropdown">
+                <li><a class="dropdown-item" href="umkm.html">UMKM</a></li>
+                <li><a class="dropdown-item" href="informasi.html">Artikel & Galeri</a></li>
+                <!-- Class active diletakkan di submenu APBDesa karena ini file apbdesa.html -->
+                <li><a class="dropdown-item" href="apbdesa.html">APBDesa</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="kontak.html">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+    <section style="padding-top: 140px; background: #f8f9fa">
+      <div class="container text-center">
+        <h1 class="fw-bold text-success">Profil Desa Bumiharjo</h1>
+
+        <p>
+          Mengenal sejarah, pemerintahan, serta gambaran umum Desa Bumiharjo,
+          Kecamatan Kemalang, Kabupaten Klaten.
+        </p>
+      </div>
+    </section>
+
+    <!-- SEJARAH -->
+    <section class="fade-up">
+      <div class="container">
+        <div class="section-title">
+          <h2>Sejarah Desa</h2>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <img src="assets/img/desa.png" class="img-fluid rounded shadow" />
+          </div>
+
+          <div class="col-lg-7 mt-4 mt-lg-0" id="teksSejarah">
+            <p>
+              Desa Bumiharjo secara administratif termasuk dalam wilayah
+              Kecamatan Kemalang Kabupaten Klaten. Penamaan/ nomenklatur Desa
+              Bumiharjo (sebelumnya Bumiharjo) berdasarkan adat istiadat secara
+              turun-temurun sejak Tahun 1900 an, Nama Desa Bumiharjo konon
+              menurut cerita para sesepuh desa berasal dari praja Glonggong,
+              cerita sesepuh untuk menunjukkan kehidupan warganya tentram makmur
+              setelah Orde Baru Praja Glonggong diganti menjadi Bumiharjo yang
+              artinya Bumi yang Sejahtera untuk mewujudkan kehidupan warganya
+              yang tentram dan makmur.dan pada saat penjajahan Belanda nama
+              tersebut tetap dilestarikan sampai dengan sekarang. Bersumber dari
+              salah satu warga (sesepuh desa) bahwa konon ceritanya nama
+              Bumiharjo adalah sebuah sebutan (akronim) dari Bumi artinya Tanah
+              Sedangkan harjo artinya Sejahtera jadi Bumiharjo Memiliki arti :
+              Tanah yang Sejahtera. Istilah ini muncul karena dulunya asal-usul
+              penduduk Bumiharjo sebagian besar adalah Petani dan mengingat
+              bahwa Bumiharjo memiliki Sumber Daya Alam Berupa Air yang berada
+              didasar Tanah Bumiharjo, menurut Ceritanya ada beberapa Sumber
+              Mata Air Kalau Tidak Ditutup Maka Bumiharjo Akan Tengelam.
+              <br /><br />
+              Desa Bumiharjo merupakan salah satu Desa di Kecamatan Kemalang
+              Kabupaten Klaten yang wilayahnya terdiri dari 10 Dukuh (Demen,
+              Surowono Lor, Surowono Kidul, Pusung, Tamanharjo, Glonggong,
+              Bumiharjo, Tirtomoyo, Ngrancah, Banjarsari) secara administrasi
+              Desa Bumiharjo terdiri dari 6 rukun Warga dan 21 Rukun Tetangga.
+              Luas Desa bumiharjo adalah 351 Ha, jumlah penduduknya 2165 jiwa,
+              dengan mata pencaharian mayoritas adalah petani, peternak dan
+              buruh. Adapun produk unggulannya adalah durian, nangka dan
+              rambutan. Bumiharjo yang terletak di lereng Gunung Merapi juga
+              menyimpan potensi pemandangan alam (view) yang menarik untuk
+              dijadikan obyek wisata.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISI MISI -->
+    <section class="bg-light">
+      <div class="container">
+        <div class="section-title">
+          <h2>Visi dan Misi</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card custom-card h-100">
+              <div class="card-body">
+                <h4 class="text-success">Visi</h4>
+
+                <p id="teksVisi">
+                  Terbangunnya tata kelola pemerintahan yang baik, tentram dan
+                  bersih guna mewujudkan desa bumiharjo yang adil, makmur dan
+                  sejahtera
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card custom-card h-100">
+              <div class="card-body">
+                <h4 class="text-success">Misi</h4>
+
+                <ul id="teksMisi">
+                  <li>
+                    Menyelenggarakan pemerintahan yang bersih, tentram, aman,
+                    dan damai bebas dari korupsi, kolusi, nepotisme, dan segala
+                    bentuk penyelewengan
+                  </li>
+
+                  <li>
+                    Mengembangkan perekonomian masyarakat melalui pemanfaatan
+                    potensi desa
+                  </li>
+
+                  <li>
+                    Meningkatkan kesehatan masyarakat melalui olahraga dan
+                    kesenian
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DATA WILAYAH -->
+    <section class="fade-up">
+      <div class="container">
+        <div class="section-title">
+          <h2>Data Umum Desa</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="stat-box">
+              <h3 id="statPenduduk">2199</h3>
+
+              <p>Jumlah Penduduk</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="stat-box">
+              <h3 id="statKK">708</h3>
+
+              <p>Jumlah KK</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="stat-box">
+              <h3 id="statLuas">351 Ha</h3>
+
+              <p>Luas Wilayah</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="stat-box">
+              <h3 id="statDukuh">10</h3>
+
+              <p>Jumlah dukuh</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRUKTUR ORGANISASI (PRESISI TERKUNCI) -->
+    <section class="bg-light py-5">
+      <div class="container">
+        <div class="section-title text-center mb-4">
+          <h2 class="fw-bold text-success">Struktur Organisasi</h2>
+          <p class="text-muted">
+            Bagan Struktur Organisasi dan Tata Kerja Pemerintah Desa Bumiharjo
+          </p>
+        </div>
+
+        <div class="board-container">
+          <!-- Header Banner -->
+          <div class="board-header text-center">
+            <h5 class="fw-bold m-0 text-uppercase">
+              Struktur Organisasi dan Tata Kerja Pemerintah Desa
+            </h5>
+            <div class="d-flex justify-content-between fw-bold mt-1 px-3 small">
+              <span>DESA : BUMIHARJO</span>
+              <span>KECAMATAN : KEMALANG</span>
+            </div>
+          </div>
+
+          <!-- Pohon Struktur Organisasi -->
+          <div class="org-wrapper">
+            <!-- LEVEL 1: KEPALA DESA -->
+            <div class="org-card">
+              <div class="org-card-title bg-green">Kepala Desa</div>
+              <div class="org-card-name" id="outKades">Lasono</div>
+            </div>
+
+            <!-- Batang Vertikal dari Kades -->
+            <div class="v-line" style="height: 25px"></div>
+
+            <!-- LEVEL 2: 3 KOLOM (KASIE | TRUNK | SEKDES & KAUR) -->
+            <div class="middle-columns">
+              <!-- KOLOM KIRI: KASIE -->
+              <div class="col-kasie">
+                <div class="col-kasie-line-top"></div>
+                <div class="v-line" style="height: 100px"></div>
+                <div class="tree-row">
+                  <div class="tree-col">
+                    <div style="height: 15px"></div>
+                    <div class="org-card">
+                      <div class="org-card-title bg-pink">
+                        Kasie. Pemerintahan
+                      </div>
+                      <div class="org-card-name" id="outKasiePem">Umi Qodriyati</div>
+                    </div>
+                  </div>
+                  <div class="tree-col">
+                    <div style="height: 15px"></div>
+                    <div class="org-card">
+                      <div class="org-card-title bg-pink">
+                        Kasie. Kesejahteraan & Pelayanan
+                      </div>
+                      <div class="org-card-name" id="outKasieKes">Danang Ismoyo, S.T</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- KOLOM TENGAH: BATANG UTAMA VERTIKAL -->
+              <div class="col-trunk">
+                <div class="col-trunk-line-top"></div>
+                <div
+                  class="v-line"
+                  style="height: 100%; min-height: 200px"
+                ></div>
+              </div>
+
+              <!-- KOLOM KANAN: SEKRETARIS DESA & KAUR -->
+              <div class="col-sekdes">
+                <div class="col-sekdes-line-top"></div>
+                <!-- Garis vertikal ini menancap PERSIS di tengah kartu Sekdes -->
+                <div class="v-line" style="height: 20px"></div>
+
+                <div class="org-card">
+                  <div class="org-card-title bg-pink">Sekretaris Desa</div>
+                  <div class="org-card-name" id="outSekdes">Sukana</div>
+                </div>
+
+                <div class="v-line" style="height: 25px"></div>
+
+                <div class="tree-row">
+                  <div class="tree-col">
+                    <div style="height: 15px"></div>
+                    <div class="org-card">
+                      <div class="org-card-title bg-pink">
+                        Kaur. Perencanaan, Tata Usaha & Umum
+                      </div>
+                      <div class="org-card-name" id="outKaurPer">Tuwuh W, S.Pd</div>
+                    </div>
+                  </div>
+                  <div class="tree-col">
+                    <div style="height: 15px"></div>
+                    <div class="org-card">
+                      <div class="org-card-title bg-pink">Kaur. Keuangan</div>
+                      <div class="org-card-name" id="outKaurKeu">Siti Sholikhah, A.Md</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PERPANJANGAN BATANG UTAMA KE KADUSUN -->
+            <div class="v-line" style="height: 30px"></div>
+
+            <!-- LEVEL 3: KEPALA DUSUN -->
+            <div
+              style="
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              "
+            >
+              <div class="tree-row">
+                <div class="tree-col">
+                  <div style="height: 15px"></div>
+                  <div class="org-card">
+                    <div class="org-card-title bg-green">Kepala Dusun 1</div>
+                    <div class="org-card-name" id="outKadus1">Lasinu</div>
+                  </div>
+                </div>
+                <div class="tree-col">
+                  <div style="height: 15px"></div>
+                  <div class="org-card">
+                    <div class="org-card-title bg-green">Kepala Dusun 2</div>
+                    <div class="org-card-name" id="outKadus2">Rahmawati</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="mt-3">
+              <small class="d-block text-white-50 mb-1"
+                >Dikembangkan oleh Kolaborasi:</small
+              >
+              <small class="fw-semibold d-block">
+                • UPN "Veteran" Yogyakarta<br />
+                • Universitas Gadjah Mada
+              </small>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Alamat</h5>
+
+            <p>
+              Glonggong<br />
+              Bumiharjo, Kecamatan Kemalang<br />
+              Kabupaten Klaten, Jawa Tengah 57484
+            </p>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Kontak</h5>
+
+            <p>+62 856-4304-3970 (Pak Tuwuh)</p>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="text-center">© 2026</div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <button id="btnTop" class="btn-top">↑</button>
+    <script src="js/script.js"></script>
+    <!-- Load Supabase Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script>
+    // Inisialisasi Supabase (Gunakan URL dan Key yang sama)
+    const supabaseUrl ='https://kgubhchvzqwrduopihcr.supabase.co'; // GANTI INI
+    const supabaseKey ='sb_publishable_tDg2_TZ9ZRc4G4uX8pKJKA_qCPhQCkN'; // GANTI INI
+    const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+    async function tampilkanProfil() {
+        const { data, error } = await supabase
+            .from('profil_desa')
+            .select('*')
+            .eq('id', 1)
+            .single();
+
+        if (error) {
+            console.error("Gagal mengambil data profil:", error);
+            return;
+        }
+
+        if (data) {
+            // Gunakan (data.sejarah || '')
+            document.getElementById('teksSejarah').innerHTML = `<p>${(data.sejarah || '').replace(/\n/g, '<br>')}</p>`;
+            document.getElementById('teksVisi').innerText = data.visi || '';
+
+            // Gunakan (data.misi || '')
+            const misiArray = (data.misi || '').split('\n').filter(m => m.trim() !== '');
+            const misiHTML = misiArray.map(m => `<li>${m}</li>`).join('');
+            document.getElementById('teksMisi').innerHTML = misiHTML;
+
+            // Mengisi data statistik
+            document.getElementById('statPenduduk').innerText = data.jml_penduduk;
+            document.getElementById('statKK').innerText = data.jml_kk;
+            document.getElementById('statLuas').innerText = data.luas_wilayah;
+            document.getElementById('statDukuh').innerText = data.jml_dukuh;
+
+            // Memasukkan nama pejabat dari database ke bagan organisasi
+            document.getElementById('outKades').innerText = data.kades || 'Belum diatur';
+            document.getElementById('outSekdes').innerText = data.sekdes || 'Belum diatur';
+            document.getElementById('outKasiePem').innerText = data.kasie_pem || 'Belum diatur';
+            document.getElementById('outKasieKes').innerText = data.kasie_kes || 'Belum diatur';
+            document.getElementById('outKaurPer').innerText = data.kaur_per || 'Belum diatur';
+            document.getElementById('outKaurKeu').innerText = data.kaur_keu || 'Belum diatur';
+            document.getElementById('outKadus1').innerText = data.kadus_1 || 'Belum diatur';
+            document.getElementById('outKadus2').innerText = data.kadus_2 || 'Belum diatur';
+        }
+    }
+
+    // Panggil fungsi saat halaman selesai dimuat
+    document.addEventListener("DOMContentLoaded", tampilkanProfil);
+</script>
+  </body>
+</html>

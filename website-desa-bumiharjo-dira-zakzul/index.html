@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>PRODUSI | Desa Bumiharjo</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Sendiri -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-success fixed-top shadow-sm"
+    >
+      <div class="container">
+        <!-- Logo & Nama Desa Pojok Kiri -->
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="index.html"
+        >
+          <img
+            src="assets/img/logo-klaten.png"
+            alt="Logo Kabupaten Klaten"
+            height="42"
+            class="d-inline-block align-text-top"
+          />
+          <div class="d-flex flex-column">
+            <span class="fw-bold text-uppercase lh-1 fs-5">Desa Bumiharjo</span>
+            <span
+              class="text-white-50"
+              style="font-size: 0.68rem; letter-spacing: 0.5px"
+              >KECAMATAN KEMALANG</span
+            >
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarProdusi"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarProdusi">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Beranda</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="profil.html">Profil</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="peta.html">Peta</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="fasilitas.html">Fasilitas</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="potensi.html">Potensi</a>
+            </li>
+
+            <!-- MENU DROPDOWN INFORMASI -->
+            <!-- Tambahkan class 'active' pada tag a pembungkus jika sedang berada di salah satu submenunya -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="informasiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Informasi
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end border-0 shadow" aria-labelledby="informasiDropdown">
+                <li><a class="dropdown-item" href="umkm.html">UMKM</a></li>
+                <li><a class="dropdown-item" href="informasi.html">Artikel & Galeri</a></li>
+                <!-- Class active diletakkan di submenu APBDesa karena ini file apbdesa.html -->
+                <li><a class="dropdown-item" href="apbdesa.html">APBDesa</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="kontak.html">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container text-center">
+        <h1>Website Profil Desa Bumiharjo</h1>
+
+        <p id="teks-sambutan">
+          Selamat datang di Website Profil Desa Bumiharjo, Kecamatan Kemalang,
+          Kabupaten Klaten, Jawa Tengah. Website ini menyediakan informasi
+          mengenai profil desa, potensi, fasilitas, UMKM, peta wilayah, serta
+          informasi lainnya yang dapat diakses oleh masyarakat.
+        </p>
+
+        <div class="hero-btn">
+          <a href="profil.html" class="btn btn-success btn-lg me-2">
+            Profil Desa
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TENTANG SINGKAT -->
+    <section class="fade-up">
+      <div class="container">
+        <div class="section-title">
+          <h2>Tentang Desa</h2>
+          <p>Sekilas informasi mengenai Desa Bumiharjo</p>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <img
+              src="assets/img/balai-desa.jpeg"
+              class="img-fluid rounded shadow"
+              alt="desa Bumiharjo"
+            />
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <p>
+              Desa Bumiharjo merupakan salah satu desa di Kecamatan Kemalang,
+              Kabupaten Klaten, Provinsi Jawa Tengah. Desa ini memiliki berbagai
+              potensi di bidang pertanian, UMKM, sumber daya alam, serta
+              kehidupan masyarakat yang masih menjunjung tinggi nilai gotong
+              royong.
+            </p>
+
+            <p>
+              Website ini dibuat sebagai media informasi digital untuk membantu
+              masyarakat, pengunjung, serta pemerintah dalam memperoleh
+              informasi mengenai profil desa, potensi, fasilitas umum, peta
+              wilayah, dan informasi lainnya secara mudah dan cepat.
+            </p>
+
+            <a href="profil.html" class="btn btn-outline-success">
+              Baca Selengkapnya
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATISTIK -->
+    <section class="bg-light">
+      <div class="container">
+        <div class="section-title">
+          <h2>Data Singkat Desa</h2>
+          <p>Data dapat diperbarui sesuai hasil pendataan</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="stat-box">
+              <h3 class="counter" id="angka-penduduk">2199</h3>
+              <p>Jumlah Penduduk</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="stat-box">
+              <h3 class="counter" id="angka-kk">708</h3>
+              <p>Kepala Keluarga</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="stat-box">
+              <h3 class="counter" id="angka-rt">21</h3>
+              <p>RT</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="stat-box">
+              <h3 class="counter" id="angka-luas">351</h3>
+              <p>Hektare Wilayah</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FITUR -->
+    <section class="fade-up">
+      <div class="container">
+        <div class="section-title">
+          <h2>Informasi yang Tersedia</h2>
+          <p>Jelajahi berbagai informasi mengenai desa</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card custom-card h-100">
+              <div class="card-body">
+                <h5>Profil Desa</h5>
+                <p>
+                  Informasi sejarah, visi misi, dan struktur organisasi desa.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card custom-card h-100">
+              <div class="card-body">
+                <h5>Peta Wilayah</h5>
+                <p>
+                  Menampilkan lokasi dan informasi wilayah administrasi desa.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card custom-card h-100">
+              <div class="card-body">
+                <h5>Potensi Desa</h5>
+                <p>
+                  Berbagai potensi lokal yang dapat dikembangkan dan
+                  dipromosikan.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card custom-card h-100">
+              <div class="card-body">
+                <h5>UMKM</h5>
+
+                <p>
+                  Informasi mengenai pelaku UMKM dan produk unggulan Desa
+                  Bumiharjo.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card custom-card h-100">
+              <div class="card-body">
+                <h5>Informasi Desa</h5>
+
+                <p>Pengumuman, agenda kegiatan, dan informasi penting desa.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card custom-card h-100">
+              <div class="card-body">
+                <h5>Fasilitas Umum</h5>
+
+                <p>Daftar fasilitas umum yang tersedia di Desa Bumiharjo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SAMBUTAN KEPALA DESA -->
+    <section class="bg-light py-5">
+      <div class="container">
+        <div class="section-title text-center">
+          <h2>Sambutan Kepala Desa</h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="card custom-card border-0 shadow-sm p-3">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <!-- Foto Kepala Desa -->
+                  <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img
+                      src="assets/img/kades.jpeg"
+                      alt="Kepala Desa Bumiharjo - Lasono"
+                      class="img-fluid rounded-circle shadow mb-3"
+                      style="
+                        width: 160px;
+                        height: 160px;
+                        object-fit: cover;
+                        border: 4px solid #198754;
+                      "
+                    />
+                    <h5 class="fw-bold text-success mb-1">Lasono</h5>
+                    <span class="badge bg-success">Kepala Desa Bumiharjo</span>
+                  </div>
+
+                  <!-- Teks Sambutan & Identitas -->
+                  <div class="col-md-8 text-center text-md-start">
+                    <p
+                      class="fst-italic text-secondary"
+                      style="text-align: justify"
+                    >
+                      Assalamu'Alaikum Warahmatullahi Wabarakatuh.<br />
+                      Website ini hadir sebagai wujud transformasi Desa
+                      Bumiharjo menjadi desa yang mampu memanfaatkan teknologi
+                      informasi dan komunikasi yang terintegrasi ke dalam sistem
+                      online. Kehadiran platform ini merupakan komitmen kami
+                      dalam mendorong keterbukaan informasi publik, meningkatkan
+                      kualitas pelayanan publik, serta menggerakkan kegiatan
+                      perekonomian di desa. Melalui inovasi ini, kami berharap
+                      dapat mewujudkan Desa Bumiharjo sebagai desa wisata yang
+                      berkelanjutan, adaptif dan tanggap terhadap mitigasi
+                      perubahan iklim, serta tumbuh menjadi desa yang
+                      mandiri.<br />
+                      Terima kasih yang sebesar-besarnya kami sampaikan kepada
+                      semua pihak yang telah banyak memberikan dukungan dan
+                      kontribusi, baik berupa tenaga, pikiran, maupun semangat,
+                      sehingga website resmi Desa Bumiharjo ini dapat
+                      terealisasi dengan baik.<br />
+                      Wassalamu'Alaikum Warahmatullahi Wabarakatuh.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="mt-3">
+              <small class="d-block text-white-50 mb-1"
+                >Dikembangkan oleh Kolaborasi:</small
+              >
+              <small class="fw-semibold d-block">
+                • UPN "Veteran" Yogyakarta<br />
+                • Universitas Gadjah Mada
+              </small>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Alamat</h5>
+
+            <p>
+              Glonggong<br />
+              Bumiharjo, Kecamatan Kemalang<br />
+              Kabupaten Klaten, Jawa Tengah 57484
+            </p>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Kontak</h5>
+
+            <p>+62 856-4304-3970 (Pak Tuwuh)</p>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="text-center">© 2026</div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <button id="btnTop" class="btn-top">↑</button>
+    <script src="js/script.js"></script>
+    <!-- Load Supabase Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script>
+        // Inisialisasi Supabase (Gunakan URL dan Key yang sama)
+        const supabaseUrl = 'https://kgubhchvzqwrduopihcr.supabase.co/';
+        const supabaseKey = 'sb_publishable_tDg2_TZ9ZRc4G4uX8pKJKA_qCPhQCkN';
+        const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+        async function fetchBeranda() {
+            const { data, error } = await supabase
+                .from('halaman_beranda')
+                .select('*')
+                .eq('id', 1)
+                .single();
+
+            if (data && !error) {
+                // Timpa teks di HTML dengan data dari Database
+                if(document.getElementById('teks-sambutan')) document.getElementById('teks-sambutan').innerText = data.sambutan;
+                if(document.getElementById('teks-profil')) document.getElementById('teks-profil').innerText = data.profil_singkat;
+                
+                // Timpa angka statistik
+                if(document.getElementById('angka-penduduk')) document.getElementById('angka-penduduk').innerText = data.stat_penduduk;
+                if(document.getElementById('angka-kk')) document.getElementById('angka-kk').innerText = data.stat_kk;
+                if(document.getElementById('angka-rt')) document.getElementById('angka-rt').innerText = data.stat_rt;
+                if(document.getElementById('angka-luas')) document.getElementById('angka-luas').innerText = data.stat_luas;
+
+                // Catatan: Karena kita menimpa angka lewat JS, animasi `.counter` di script.js milikmu 
+                // mungkin perlu sedikit penyesuaian jika angkanya terganti setelah animasi berjalan.
+            }
+        }
+
+        // Jalankan fungsi saat halaman dimuat
+        fetchBeranda();
+    </script>
+  </body>
+</html>

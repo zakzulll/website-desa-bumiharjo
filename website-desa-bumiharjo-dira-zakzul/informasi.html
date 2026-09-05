@@ -1,0 +1,1299 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informasi Desa | PRODUSI</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-success fixed-top shadow-sm"
+    >
+      <div class="container">
+        <!-- Logo & Nama Desa Pojok Kiri -->
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="index.html"
+        >
+          <img
+            src="assets/img/logo-klaten.png"
+            alt="Logo Kabupaten Klaten"
+            height="42"
+            class="d-inline-block align-text-top"
+          />
+          <div class="d-flex flex-column">
+            <span class="fw-bold text-uppercase lh-1 fs-5">Desa Bumiharjo</span>
+            <span
+              class="text-white-50"
+              style="font-size: 0.68rem; letter-spacing: 0.5px"
+              >KECAMATAN KEMALANG</span
+            >
+          </div>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarProdusi"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarProdusi">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Beranda</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="profil.html">Profil</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="peta.html">Peta</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="fasilitas.html">Fasilitas</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="potensi.html">Potensi</a>
+            </li>
+
+            <!-- MENU DROPDOWN INFORMASI -->
+            <!-- Tambahkan class 'active' pada tag a pembungkus jika sedang berada di salah satu submenunya -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="informasiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Informasi
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end border-0 shadow" aria-labelledby="informasiDropdown">
+                <li><a class="dropdown-item" href="umkm.html">UMKM</a></li>
+                <li><a class="dropdown-item active bg-success" href="informasi.html">Artikel & Galeri</a></li>
+                <!-- Class active diletakkan di submenu APBDesa karena ini file apbdesa.html -->
+                <li><a class="dropdown-item" href="apbdesa.html">APBDesa</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="kontak.html">Kontak</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+
+    <section
+      style="padding-top: 150px; padding-bottom: 80px; background: #f8f9fa"
+    >
+      <div class="container text-center">
+        <h1 class="fw-bold text-success">Informasi Desa</h1>
+
+        <p>Pusat informasi dan kegiatan Desa Bumiharjo.</p>
+      </div>
+    </section>
+
+    <!-- ARTIKEL -->
+    <section class="fade-up">
+      <div class="container">
+        <div class="section-title mb-5">
+          <h2>Artikel Desa</h2>
+          <p>
+            Berbagai artikel dan informasi mengenai kegiatan, potensi, serta
+            perkembangan Desa Bumiharjo.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Artikel 1 -->
+          <div class="col-lg-4">
+            <div
+              class="card h-100 shadow-sm border-0 overflow-hidden d-flex flex-column"
+              style="border-radius: 0.75rem"
+            >
+              <img
+                src="assets/img/penyuluhan-bpbd.JPG"
+                class="card-img-top border-bottom"
+                style="height: 192px; object-fit: cover"
+                alt="Artikel 1"
+              />
+              <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                <h5 class="card-title fw-bold mb-2" style="line-height: 1.2">
+                  Penyuluhan Badan Penanggulangan Bencana Daerah
+                </h5>
+                <p class="small text-muted mb-3">
+                  19 Juli 2026 &bull;
+                  <span class="fw-medium text-success">Admin Desa</span>
+                </p>
+                <p
+                  class="card-text text-secondary small mb-4"
+                  style="line-height: 1.6"
+                >
+                  Pentingnya Mitigasi Sejak Dini Kondisi geografis dan
+                  lingkungan menuntut kesiapan masyarakat di berbagai lapisan...
+                </p>
+              </div>
+              <div class="px-4 pb-4 mt-auto">
+                <a
+                  href="#"
+                  class="text-success fw-semibold text-decoration-none d-flex align-items-center"
+                  style="font-size: 0.875rem"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalArtikel1"
+                >
+                  Baca Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-short ms-1"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artikel 2 -->
+          <div class="col-lg-4">
+            <div
+              class="card h-100 shadow-sm border-0 overflow-hidden d-flex flex-column"
+              style="border-radius: 0.75rem"
+            >
+              <img
+                src="assets/img/situs-budaya.jpg"
+                class="card-img-top border-bottom"
+                style="height: 192px; object-fit: cover"
+                alt="Artikel 2"
+              />
+              <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                <h5 class="card-title fw-bold mb-2" style="line-height: 1.2">
+                  Situs Selo Rembulan : Warisan Leluhur dan Identitas Budaya
+                  Desa Bumiharjo
+                </h5>
+                <p class="small text-muted mb-3">
+                  15 Juli 2026 &bull;
+                  <span class="fw-medium text-success">Admin Desa</span>
+                </p>
+                <p
+                  class="card-text text-secondary small mb-4"
+                  style="line-height: 1.6"
+                >
+                  Desa Bumiharjo merupakan salah satu desa yang berada di
+                  Kecamatan Kemalang, Kabupaten Klaten, yang memiliki kekayaan
+                  potensi alam sekaligus warisan budaya...
+                </p>
+              </div>
+              <div class="px-4 pb-4 mt-auto">
+                <a
+                  href="#"
+                  class="text-success fw-semibold text-decoration-none d-flex align-items-center"
+                  style="font-size: 0.875rem"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalArtikel2"
+                >
+                  Baca Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-short ms-1"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artikel 3 -->
+          <div class="col-lg-4">
+            <div
+              class="card h-100 shadow-sm border-0 overflow-hidden d-flex flex-column"
+              style="border-radius: 0.75rem"
+            >
+              <img
+                src="assets/img/posyandu.jpeg"
+                class="card-img-top border-bottom"
+                style="height: 192px; object-fit: cover"
+                alt="Artikel 3"
+              />
+              <div class="card-body p-4 d-flex flex-column flex-grow-1">
+                <h5 class="card-title fw-bold mb-2" style="line-height: 1.2">
+                  Kegiatan Posyandu Bersama KKN di Desa Bumiharjo
+                </h5>
+                <p class="small text-muted mb-3">
+                  20 Juli 2026 &bull;
+                  <span class="fw-medium text-success">Admin Desa</span>
+                </p>
+                <p
+                  class="card-text text-secondary small mb-4"
+                  style="line-height: 1.6"
+                >
+                  Mahasiswa KKN melaksanakan berbagai program kerja bersama
+                  masyarakat Desa Bumiharjo selama satu bulan penuh...
+                </p>
+              </div>
+              <div class="px-4 pb-4 mt-auto">
+                <a
+                  href="#"
+                  class="text-success fw-semibold text-decoration-none d-flex align-items-center"
+                  style="font-size: 0.875rem"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalArtikel3"
+                >
+                  Baca Selengkapnya
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-arrow-right-short ms-1"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KUMPULAN MODAL ARTIKEL (Detail Berita) -->
+
+    <!-- Modal Artikel 1 -->
+    <div class="modal fade" id="modalArtikel1" tabindex="-1" aria-hidden="true">
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div
+          class="modal-content border-0 shadow-lg"
+          style="border-radius: 1rem"
+        >
+          <div class="modal-header border-0 pb-0">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-5 pt-2">
+            <h2 class="fw-bold mb-3">
+              Penyuluhan Badan Penanggulangan Bencana Daerah
+            </h2>
+            <img
+              src="assets/img/penyuluhan-bpbd.JPG"
+              class="img-fluid rounded mb-4 w-100 border"
+              style="max-height: 350px; object-fit: cover"
+              alt="Gambar Artikel"
+            />
+
+            <div
+              class="d-flex align-items-center small text-muted mb-4 border-bottom pb-3"
+            >
+              <span class="fw-medium text-success">Admin Desa</span>
+              <span class="mx-2">&bull;</span>
+              <span>19 Juli 2026</span>
+            </div>
+
+            <div
+              class="text-secondary"
+              style="line-height: 1.8; white-space: pre-line"
+            >
+              BUMIHARJO — Dalam upaya mewujudkan masyarakat yang tangguh dan
+              sigap menghadapi ancaman bencana alam, Tim Kuliah Kerja Nyata
+              (KKN) Universitas Pembangunan Nasional (UPN) sukses menggelar
+              program penyuluhan kebencanaan pada Minggu, 19 Juli 2026. Bekerja
+              sama langsung dengan Badan Penanggulangan Bencana Daerah (BPBD),
+              kegiatan edukatif ini diselenggarakan di balai Desa Bumiharjo dan
+              dihadiri oleh perangkat desa serta puluhan warga setempat.
+              Pentingnya Mitigasi Sejak Dini Kondisi geografis dan lingkungan
+              menuntut kesiapan masyarakat di berbagai lapisan dalam menghadapi
+              potensi keadaan darurat. Mengingat hal tersebut, Tim KKN UPN
+              menginisiasi program kerja ini sebagai bentuk pengabdian
+              masyarakat yang berfokus pada dampak keselamatan jangka panjang.
+              Dalam sesi penyuluhan, pemateri dari BPBD memaparkan
+              langkah-langkah krusial terkait mitigasi bencana, yang meliputi:
+              Pemetaan Potensi Bencana Lokal: Mengedukasi warga untuk mengenali
+              jenis-jenis ancaman alam yang paling rawan terjadi di wilayah
+              sekitar Bumiharjo. Sistem Peringatan Dini: Panduan cara membaca
+              dan merespons tanda-tanda awal datangnya bencana untuk mencegah
+              kepanikan massal. Manajemen Evakuasi: Penentuan jalur penyelamatan
+              yang aman dan titik kumpul darurat, dengan prioritas pada kelompok
+              rentan seperti lansia, anak-anak, dan difabel. Antusiasme Warga
+              dan Kolaborasi Aktif Kegiatan penyuluhan ini tidak hanya berjalan
+              satu arah. Warga Desa Bumiharjo menunjukkan antusiasme yang tinggi
+              melalui sesi diskusi dan tanya jawab interaktif. Selain pemaparan
+              materi, Tim KKN UPN bersama petugas BPBD juga memberikan simulasi
+              ringan mengenai langkah penyelamatan pertama saat situasi darurat
+              terjadi. Kolaborasi antara mahasiswa dan lembaga pemerintah ini
+              dinilai sangat efektif. Tim KKN UPN berhasil menjalankan perannya
+              sebagai fasilitator yang menjembatani program kesiapsiagaan dari
+              BPBD dengan kebutuhan riil masyarakat di tingkat desa. Menuju Desa
+              Tangguh Bencana Melalui kelancaran acara pada 19 Juli 2026 ini,
+              Tim KKN UPN berharap Desa Bumiharjo memiliki fondasi yang kuat
+              untuk berkembang menjadi Desa Tangguh Bencana (DESTANA).
+              Pengetahuan mitigasi yang telah dibagikan diharapkan dapat
+              diteruskan oleh warga ke lingkup keluarga masing-masing. Dengan
+              terbangunnya kesadaran kolektif dan kesiapsiagaan yang matang,
+              risiko kerugian baik materiil maupun korban jiwa akibat bencana di
+              masa depan dapat diminimalisir sedini mungkin.
+            </div>
+            <!-- ================= MULAI KODE INTERAKSI ================= -->
+            <div class="mt-5 border-top pt-4">
+              <!-- Tombol Like & Share -->
+              <div
+                class="d-flex justify-content-between align-items-center mb-4"
+              >
+                <button
+                  class="btn btn-outline-danger btn-sm btn-like d-flex align-items-center gap-1"
+                  onclick="toggleLike(this)"
+                >
+                  <i class="bi bi-heart"></i> <span>Suka</span> (<span
+                    class="like-count"
+                    >0</span
+                  >)
+                </button>
+
+                <div class="dropdown">
+                  <button
+                    class="btn btn-outline-secondary btn-sm dropdown-toggle d-flex align-items-center gap-1"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-share"></i> Bagikan
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                    <li>
+                      <a
+                        class="dropdown-item d-flex align-items-center gap-2 share-wa"
+                        href="#"
+                        target="_blank"
+                        ><i class="bi bi-whatsapp text-success"></i> WhatsApp</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item d-flex align-items-center gap-2 share-fb"
+                        href="#"
+                        target="_blank"
+                        ><i class="bi bi-facebook text-primary"></i> Facebook</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item d-flex align-items-center gap-2 share-x"
+                        href="#"
+                        target="_blank"
+                        ><i class="bi bi-twitter-x"></i> X (Twitter)</a
+                      >
+                    </li>
+                    <!-- Instagram tidak memiliki URL sharing web langsung, diarahkan ke copy link -->
+                    <li>
+                      <button
+                        class="dropdown-item d-flex align-items-center gap-2 share-ig"
+                        type="button"
+                        onclick="shareToInstagram()"
+                      >
+                        <i class="bi bi-instagram text-danger"></i> Instagram
+                      </button>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <button
+                        class="dropdown-item d-flex align-items-center gap-2"
+                        type="button"
+                        onclick="copyArticleLink()"
+                      >
+                        <i class="bi bi-link-45deg"></i> Salin Tautan
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Kolom Komentar -->
+              <div class="komentar-section bg-light p-4 rounded-3">
+                <h6 class="fw-bold mb-3">Komentar</h6>
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Tulis komentar Anda..."
+                    aria-label="Tulis komentar"
+                  />
+                  <button
+                    class="btn btn-success"
+                    type="button"
+                    onclick="postComment(this)"
+                  >
+                    Kirim
+                  </button>
+                </div>
+                <!-- Tempat daftar komentar -->
+                <div class="komentar-list small text-secondary">
+                  <div class="mb-2 pb-2 border-bottom">
+                    <strong class="text-dark">Warga Lokal</strong>: Informasi
+                    yang sangat bermanfaat!
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ================= AKHIR KODE INTERAKSI ================= -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Artikel 2 -->
+    <div class="modal fade" id="modalArtikel2" tabindex="-1" aria-hidden="true">
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div
+          class="modal-content border-0 shadow-lg"
+          style="border-radius: 1rem"
+        >
+          <div class="modal-header border-0 pb-0">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-5 pt-2">
+            <h2 class="fw-bold mb-3">
+              Situs Selo Rembulan: Warisan Leluhur dan Identitas Budaya Desa
+              Bumiharjo
+            </h2>
+            <img
+              src="assets/img/situs-budaya.jpg"
+              class="img-fluid rounded mb-4 w-100 border"
+              style="max-height: 350px; object-fit: cover"
+              alt="Gambar Artikel"
+            />
+
+            <div
+              class="d-flex align-items-center small text-muted mb-4 border-bottom pb-3"
+            >
+              <span class="fw-medium text-success">Admin Desa</span>
+              <span class="mx-2">&bull;</span>
+              <span>15 Juli 2026</span>
+            </div>
+
+            <div
+              class="text-secondary"
+              style="line-height: 1.8; white-space: pre-line"
+            >
+              Desa Bumiharjo merupakan salah satu desa yang berada di Kecamatan
+              Kemalang, Kabupaten Klaten, yang memiliki kekayaan potensi alam
+              sekaligus warisan budaya. Selain dikenal sebagai wilayah dengan
+              lahan pertanian yang subur, desa ini juga menyimpan peninggalan
+              sejarah yang hingga kini masih hidup dalam ingatan kolektif
+              masyarakat, yaitu Situs Selo Rembulan. Keberadaan situs tersebut
+              tidak hanya menjadi bukti sejarah lokal, tetapi juga mencerminkan
+              nilai-nilai budaya, kepercayaan, dan tradisi yang diwariskan
+              secara turun-temurun. Bagi masyarakat Desa Bumiharjo, sejarah desa
+              dan keberadaan Situs Selo Rembulan merupakan dua hal yang saling
+              berkaitan. Keduanya membentuk identitas desa serta menjadi bagian
+              dari kearifan lokal yang masih dijaga hingga saat ini.
+              Pendokumentasian sejarah desa beserta tradisi lisan mengenai Situs
+              Selo Rembulan penting dilakukan sebagai upaya pelestarian warisan
+              budaya bagi generasi mendatang. Secara administratif, Desa
+              Bumiharjo termasuk dalam wilayah Kecamatan Kemalang, Kabupaten
+              Klaten. Berdasarkan penuturan para sesepuh desa, nama Bumiharjo
+              telah digunakan secara turun-temurun sejak sekitar tahun 1900-an.
+              Sebelum menggunakan nama tersebut, wilayah ini dikenal sebagai
+              Praja Dadapan. Pada masa Orde Baru, nama tersebut kemudian diubah
+              menjadi Desa Bumiharjo dengan harapan masyarakat dapat hidup lebih
+              tenteram, makmur, dan damai. Nama Bumiharjo berasal dari dua kata,
+              yaitu bumi yang berarti tanah dan harjo yang berarti kamulyan atau
+              kemuliaan. Dengan demikian, Bumiharjo memiliki makna Tanah
+              Kamulyan, yaitu tanah yang membawa kemuliaan, kesejahteraan, dan
+              kehidupan yang baik bagi masyarakatnya. Penamaan tersebut juga
+              erat kaitannya dengan kondisi geografis desa yang memiliki tanah
+              subur dan sumber daya air yang melimpah. Sejak dahulu sebagian
+              besar penduduk Bumiharjo bermata pencaharian sebagai petani
+              sehingga kesuburan tanah menjadi penopang utama kehidupan
+              masyarakat. Kondisi tersebut sejalan dengan ungkapan Jawa gemah
+              ripah loh jinawi, yang menggambarkan suatu wilayah dengan sumber
+              daya alam melimpah dan kehidupan masyarakat yang makmur. Hingga
+              kini, nama Bumiharjo tetap dipertahankan sebagai identitas desa
+              sekaligus harapan agar masyarakat senantiasa hidup dalam suasana
+              tenteram, rukun, dan sejahtera. Pada usianya yang telah mencapai
+              124 tahun, Desa Bumiharjo mengusung tema Gumbregah Hangayuh
+              Tentrem Saha Guyup Rukuning Warga, yang mencerminkan semangat
+              masyarakat dalam mewujudkan kehidupan yang harmonis melalui
+              kebersamaan dan gotong royong. Selain memiliki sejarah penamaan
+              desa yang panjang, Bumiharjo juga menyimpan warisan budaya berupa
+              Situs Selo Rembulan. Dalam Bahasa Jawa, selo berarti batu,
+              sedangkan rembulan berarti bulan, sehingga nama Selo Rembulan
+              dapat dimaknai sebagai Batu Rembulan. Berdasarkan hasil wawancara
+              dengan salah seorang sesepuh desa, situs ini dipercaya telah ada
+              sebelum Desa Bumiharjo terbentuk. Menurut tradisi lisan yang
+              berkembang di masyarakat, desa mulai berkembang sekitar tahun
+              850-an, sedangkan keberadaan Situs Selo Rembulan telah lebih
+              dahulu dikenal oleh masyarakat setempat. Situs ini dipandang
+              sebagai peninggalan leluhur yang diwariskan dari generasi ke
+              generasi. Secara fisik, Situs Selo Rembulan berupa sebuah batu
+              berbentuk segi empat yang berada di atas lahan milik warga.
+              Kondisi batu saat ini telah banyak ditumbuhi lumut akibat tidak
+              adanya perawatan khusus. Pembersihan situs tidak dilakukan secara
+              rutin, melainkan hanya sesekali ketika pemilik lahan membersihkan
+              area di sekitarnya. Meskipun demikian, kondisi tersebut tidak
+              mengurangi penghormatan masyarakat terhadap keberadaan situs
+              sebagai bagian dari warisan budaya desa. Di tengah masyarakat Desa
+              Bumiharjo masih berkembang berbagai kepercayaan yang berkaitan
+              dengan Situs Selo Rembulan. Berdasarkan keterangan narasumber,
+              setiap orang yang melewati atau mengunjungi situs dianjurkan untuk
+              mengucapkan permisi sebagai bentuk penghormatan kepada leluhur
+              maupun penunggu gaib yang dipercaya berada di lokasi tersebut.
+              Menurut kepercayaan masyarakat, seseorang yang mengabaikan tata
+              krama tersebut dapat mengalami gangguan, seperti didatangi dalam
+              mimpi (mrimpeni) atau merasa diikuti oleh roh penunggu situs.
+              Kepercayaan tersebut sejalan dengan falsafah Jawa desa mawa cara,
+              negara mawa tata, yang mengajarkan bahwa setiap daerah memiliki
+              adat istiadat dan tata cara yang patut dihormati. Dalam konteks
+              ini, mengucapkan permisi dipandang sebagai bentuk penghormatan
+              terhadap nilai-nilai budaya yang telah diwariskan oleh leluhur.
+              Situs Selo Rembulan juga dikaitkan dengan tokoh yang dikenal
+              sebagai Kyai Mertohidoyo. Selain itu, berkembang pula cerita bahwa
+              seseorang dapat mengalami kesurupan apabila mendekati situs tanpa
+              menjaga sikap maupun etika. Meskipun kisah-kisah tersebut tidak
+              dapat dibuktikan secara ilmiah, keberadaannya masih menjadi bagian
+              dari tradisi lisan yang hidup di tengah masyarakat dan terus
+              diwariskan kepada generasi berikutnya. Sebagai bentuk penghormatan
+              terhadap situs, sebagian masyarakat masih melakukan tradisi
+              pemberian sesaji ketika memiliki hajat atau permohonan tertentu.
+              Bentuk sesaji tidak memiliki ketentuan khusus dan dapat berupa
+              jambu mentah, empon-empon, maupun tumpeng kecil yang dibungkus
+              menggunakan empat lembar daun kelapa kering. Tradisi tersebut
+              tidak dilakukan secara rutin, melainkan hanya ketika masyarakat
+              memiliki keperluan tertentu, seperti memohon kelancaran suatu
+              hajat atau mengungkapkan rasa syukur. Selain itu, masyarakat juga
+              mengenal kisah mengenai upaya pemindahan batu Situs Selo Rembulan.
+              Menurut cerita yang berkembang, seseorang yang pernah berusaha
+              memindahkan batu tersebut kemudian mengalami sakit hingga tidak
+              dapat beraktivitas sebagaimana biasanya. Kisah tersebut menjadi
+              salah satu cerita rakyat yang memperkuat pandangan masyarakat
+              mengenai kesakralan Situs Selo Rembulan serta pentingnya menjaga
+              dan menghormati peninggalan leluhur. Keberadaan Situs Selo
+              Rembulan menunjukkan bahwa warisan budaya tidak hanya berupa benda
+              fisik, tetapi juga mencakup nilai-nilai, tradisi, dan cerita yang
+              hidup dalam masyarakat. Tradisi mengucapkan permisi, pemberian
+              sesaji pada waktu tertentu, serta berbagai cerita yang berkembang
+              mengenai situs merupakan bagian dari kearifan lokal yang
+              memperlihatkan hubungan harmonis antara manusia, alam, dan
+              leluhur. Kondisi fisik situs yang belum mendapatkan perawatan
+              secara optimal menunjukkan perlunya perhatian lebih terhadap upaya
+              pelestarian. Pendokumentasian sejarah, tradisi lisan, serta cerita
+              masyarakat menjadi langkah awal yang penting untuk menjaga
+              keberlangsungan nilai budaya yang terkandung di dalamnya.
+              Pelestarian tidak hanya ditujukan untuk mempertahankan keberadaan
+              situs sebagai peninggalan sejarah, tetapi juga sebagai sarana
+              edukasi bagi generasi muda agar lebih mengenal sejarah dan budaya
+              daerahnya. Situs Selo Rembulan merupakan salah satu warisan budaya
+              yang memperkaya identitas Desa Bumiharjo. Keberadaannya tidak
+              hanya menyimpan jejak sejarah yang diwariskan melalui tradisi
+              lisan, tetapi juga mencerminkan nilai-nilai penghormatan terhadap
+              leluhur, adat istiadat, dan kearifan lokal yang masih dijaga oleh
+              masyarakat hingga saat ini. Berbagai cerita dan kepercayaan yang
+              berkembang di sekitar situs menjadi bagian dari memori kolektif
+              masyarakat yang turut membentuk karakter budaya desa. Di tengah
+              perkembangan zaman, pendokumentasian sejarah dan tradisi lisan
+              seperti yang berkaitan dengan Situs Selo Rembulan menjadi langkah
+              penting agar warisan budaya tersebut tidak hilang ditelan waktu.
+              Melalui upaya pelestarian, baik dalam bentuk dokumentasi, edukasi,
+              maupun keterlibatan masyarakat, nilai-nilai budaya yang terkandung
+              di dalamnya diharapkan dapat terus diwariskan kepada generasi
+              mendatang sebagai bagian dari identitas dan kekayaan budaya Desa
+              Bumiharjo.
+            </div>
+            <!-- ================= MULAI KODE INTERAKSI ================= -->
+            <div class="mt-5 border-top pt-4">
+              <!-- Tombol Like & Share -->
+              <div
+                class="d-flex justify-content-between align-items-center mb-4"
+              >
+                <button
+                  class="btn btn-outline-danger btn-sm btn-like d-flex align-items-center gap-1"
+                  onclick="toggleLike(this)"
+                >
+                  <i class="bi bi-heart"></i> <span>Suka</span> (<span
+                    class="like-count"
+                    >0</span
+                  >)
+                </button>
+
+                <div class="dropdown">
+                  <button
+                    class="btn btn-outline-secondary btn-sm dropdown-toggle d-flex align-items-center gap-1"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-share"></i> Bagikan
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                    <li>
+                      <a
+                        class="dropdown-item d-flex align-items-center gap-2 share-wa"
+                        href="#"
+                        target="_blank"
+                        ><i class="bi bi-whatsapp text-success"></i> WhatsApp</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item d-flex align-items-center gap-2 share-fb"
+                        href="#"
+                        target="_blank"
+                        ><i class="bi bi-facebook text-primary"></i> Facebook</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item d-flex align-items-center gap-2 share-x"
+                        href="#"
+                        target="_blank"
+                        ><i class="bi bi-twitter-x"></i> X (Twitter)</a
+                      >
+                    </li>
+                    <!-- Instagram tidak memiliki URL sharing web langsung, diarahkan ke copy link -->
+                    <li>
+                      <button
+                        class="dropdown-item d-flex align-items-center gap-2 share-ig"
+                        type="button"
+                        onclick="shareToInstagram()"
+                      >
+                        <i class="bi bi-instagram text-danger"></i> Instagram
+                      </button>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <button
+                        class="dropdown-item d-flex align-items-center gap-2"
+                        type="button"
+                        onclick="copyArticleLink()"
+                      >
+                        <i class="bi bi-link-45deg"></i> Salin Tautan
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Kolom Komentar -->
+              <div class="komentar-section bg-light p-4 rounded-3">
+                <h6 class="fw-bold mb-3">Komentar</h6>
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Tulis komentar Anda..."
+                    aria-label="Tulis komentar"
+                  />
+                  <button
+                    class="btn btn-success"
+                    type="button"
+                    onclick="postComment(this)"
+                  >
+                    Kirim
+                  </button>
+                </div>
+                <!-- Tempat daftar komentar -->
+                <div class="komentar-list small text-secondary">
+                  <div class="mb-2 pb-2 border-bottom">
+                    <strong class="text-dark">Warga Lokal</strong>: Informasi
+                    yang sangat bermanfaat!
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ================= AKHIR KODE INTERAKSI ================= -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Artikel 3 -->
+    <div class="modal fade" id="modalArtikel3" tabindex="-1" aria-hidden="true">
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div
+          class="modal-content border-0 shadow-lg"
+          style="border-radius: 1rem"
+        >
+          <div class="modal-header border-0 pb-0">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-5 pt-2">
+            <h2 class="fw-bold mb-3">
+              Kegiatan Posyandu Bersama KKN di Desa Bumiharjo
+            </h2>
+            <img
+              src="assets/img/posyandu.jpeg"
+              class="img-fluid rounded mb-4 w-100 border"
+              style="max-height: 350px; object-fit: cover"
+              alt="Gambar Artikel"
+            />
+
+            <div
+              class="d-flex align-items-center small text-muted mb-4 border-bottom pb-3"
+            >
+              <span class="fw-medium text-success">Admin Desa</span>
+              <span class="mx-2">&bull;</span>
+              <span>20 Juli 2026</span>
+            </div>
+
+            <div
+              class="text-secondary"
+              style="line-height: 1.8; white-space: pre-line"
+            >
+              BUMIHARJO — Semangat pengabdian kepada masyarakat kembali
+              ditunjukkan oleh kalangan akademisi. Sebuah sinergi lintas kampus
+              berhasil tercipta melalui kolaborasi antara Tim Kuliah Kerja Nyata
+              (KKN) Universitas Pembangunan Nasional (UPN) dan Universitas
+              Gadjah Mada (UGM) dalam mendukung optimalisasi program Pos
+              Pelayanan Terpadu (Posyandu) di balai desa setempat. Kegiatan ini
+              menjadi langkah konkret mahasiswa dalam membantu kader kesehatan
+              desa, sekaligus mendukung program percepatan penurunan angka
+              stunting dan peningkatan kesejahteraan ibu serta anak di
+              lingkungan masyarakat. Optimalisasi Alur Pelayanan Kesehatan
+              Kehadiran gabungan mahasiswa dari kedua universitas ini memberikan
+              dorongan tenaga dan efisiensi yang signifikan bagi penyelenggaraan
+              Posyandu. Dengan sistem pembagian tugas yang terstruktur, alur
+              pelayanan dari pendaftaran hingga penyuluhan berjalan dengan jauh
+              lebih cepat dan teratur. Dalam pelaksanaan kegiatan, tim KKN UPN
+              dan UGM mengambil peran aktif pada berbagai tahapan, di antaranya:
+              Registrasi dan Administrasi: Membantu pencatatan data kehadiran
+              balita, ibu hamil, dan lansia pada Buku Kesehatan Ibu dan Anak
+              (KIA) untuk memastikan rekam perkembangan warga terdata secara
+              akurat. Pemantauan Tumbuh Kembang: Mendampingi kader desa dalam
+              melakukan penimbangan berat badan, pengukuran tinggi/panjang
+              badan, serta lingkar kepala dan lengan. Penyaluran Makanan
+              Tambahan (PMT): Menyiapkan dan mendistribusikan paket asupan kaya
+              gizi sebagai intervensi langsung terhadap pemenuhan nutrisi balita
+              dan ibu hamil. Edukasi dan Pendampingan: Memberikan sosialisasi
+              ringan namun interaktif mengenai pentingnya menjaga sanitasi
+              lingkungan, pola asuh yang responsif, serta pedoman gizi seimbang
+              harian. Sinergi Nyata untuk Masyarakat Desa Kerja sama antara
+              mahasiswa UPN dan UGM ini membuktikan bahwa kolaborasi antarkampus
+              mampu menghasilkan dampak yang lebih luas dan masif bagi
+              masyarakat. Keterlibatan para mahasiswa tidak sekadar meringankan
+              beban teknis operasional para kader Posyandu, tetapi juga menjadi
+              sarana untuk menghadirkan pendekatan pelayanan yang lebih segar
+              dan inovatif di tingkat desa. Melalui sinergi pengabdian ini,
+              diharapkan antusiasme warga untuk rutin memeriksakan kesehatan
+              keluarganya di fasilitas Posyandu semakin meningkat. Kolaborasi
+              ini juga menjadi bukti nyata bagaimana generasi muda dapat turun
+              langsung memperkuat fondasi kesehatan masyarakat yang dimulai dari
+              desa.
+            </div>
+            <!-- ================= MULAI KODE INTERAKSI ================= -->
+            <div class="mt-5 border-top pt-4">
+              <!-- Tombol Like & Share -->
+              <div
+                class="d-flex justify-content-between align-items-center mb-4"
+              >
+                <button
+                  class="btn btn-outline-danger btn-sm btn-like d-flex align-items-center gap-1"
+                  onclick="toggleLike(this)"
+                >
+                  <i class="bi bi-heart"></i> <span>Suka</span> (<span
+                    class="like-count"
+                    >0</span
+                  >)
+                </button>
+
+                <div class="dropdown">
+                  <button
+                    class="btn btn-outline-secondary btn-sm dropdown-toggle d-flex align-items-center gap-1"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-share"></i> Bagikan
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                    <li>
+                      <a
+                        class="dropdown-item d-flex align-items-center gap-2 share-wa"
+                        href="#"
+                        target="_blank"
+                        ><i class="bi bi-whatsapp text-success"></i> WhatsApp</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item d-flex align-items-center gap-2 share-fb"
+                        href="#"
+                        target="_blank"
+                        ><i class="bi bi-facebook text-primary"></i> Facebook</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item d-flex align-items-center gap-2 share-x"
+                        href="#"
+                        target="_blank"
+                        ><i class="bi bi-twitter-x"></i> X (Twitter)</a
+                      >
+                    </li>
+                    <!-- Instagram tidak memiliki URL sharing web langsung, diarahkan ke copy link -->
+                    <li>
+                      <button
+                        class="dropdown-item d-flex align-items-center gap-2 share-ig"
+                        type="button"
+                        onclick="shareToInstagram()"
+                      >
+                        <i class="bi bi-instagram text-danger"></i> Instagram
+                      </button>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <button
+                        class="dropdown-item d-flex align-items-center gap-2"
+                        type="button"
+                        onclick="copyArticleLink()"
+                      >
+                        <i class="bi bi-link-45deg"></i> Salin Tautan
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Kolom Komentar -->
+              <div class="komentar-section bg-light p-4 rounded-3">
+                <h6 class="fw-bold mb-3">Komentar</h6>
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Tulis komentar Anda..."
+                    aria-label="Tulis komentar"
+                  />
+                  <button
+                    class="btn btn-success"
+                    type="button"
+                    onclick="postComment(this)"
+                  >
+                    Kirim
+                  </button>
+                </div>
+                <!-- Tempat daftar komentar -->
+                <div class="komentar-list small text-secondary">
+                  <div class="mb-2 pb-2 border-bottom">
+                    <strong class="text-dark">Warga Lokal</strong>: Informasi
+                    yang sangat bermanfaat!
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ================= AKHIR KODE INTERAKSI ================= -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GALERI KEGIATAN -->
+    <section class="bg-light fade-up pb-5 pt-5">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <h2 class="fw-bold">Galeri Kegiatan</h2>
+          <p class="text-muted">
+            Dokumentasi kegiatan masyarakat dan Pemerintah Desa Bumiharjo.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Kegiatan 1 -->
+          <div class="col-md-4">
+            <div
+              class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden"
+            >
+              <div
+                id="carouselKegiatan1"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="assets/img/posyandu (1).JPG"
+                      class="d-block w-100 object-fit-cover"
+                      style="height: 250px"
+                      alt="Posyandu 1"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/posyandu (2).JPG"
+                      class="d-block w-100 object-fit-cover"
+                      style="height: 250px"
+                      alt="Posyandu 2"
+                    />
+                  </div>
+                  <div class="carousel-item active">
+                    <img
+                      src="assets/img/posyandu (3).JPG"
+                      class="d-block w-100 object-fit-cover"
+                      style="height: 250px"
+                      alt="Posyandu 3"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/posyandu (4).JPG"
+                      class="d-block w-100 object-fit-cover"
+                      style="height: 250px"
+                      alt="Posyandu 4"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselKegiatan1"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselKegiatan1"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <div class="card-body text-center bg-white">
+                <h5 class="card-title fw-bold text-success mb-0">Posyandu</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kegiatan 2 -->
+          <div class="col-md-4">
+            <div
+              class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden"
+            >
+              <div
+                id="carouselKegiatan2"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="assets/img/penanaman-bibit (1).JPG"
+                      class="d-block w-100 object-fit-cover"
+                      style="height: 250px"
+                      alt="Penanaman bibit 1"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/penanaman-bibit (2).JPG"
+                      class="d-block w-100 object-fit-cover"
+                      style="height: 250px"
+                      alt="Penanaman bibit 2"
+                    />
+                  </div>
+                  <div class="carousel-item active">
+                    <img
+                      src="assets/img/penanaman-bibit (3).JPG"
+                      class="d-block w-100 object-fit-cover"
+                      style="height: 250px"
+                      alt="Penanaman bibit 3"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/penanaman-bibit (4).JPG"
+                      class="d-block w-100 object-fit-cover"
+                      style="height: 250px"
+                      alt="Penanaman bibit 4"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselKegiatan2"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselKegiatan2"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <div class="card-body text-center bg-white">
+                <h5 class="card-title fw-bold text-success mb-0">
+                  Program Penanaman Bibit
+                </h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kegiatan 3 -->
+          <div class="col-md-4">
+            <div
+              class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden"
+            >
+              <div
+                id="carouselKegiatan3"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="assets/img/senam bersama (1).JPG"
+                      class="d-block w-100 object-fit-cover"
+                      style="height: 250px"
+                      alt="Senam 1"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/senam bersama (2).JPG"
+                      class="d-block w-100 object-fit-cover"
+                      style="height: 250px"
+                      alt="Senam 2"
+                    />
+                  </div>
+                  <div class="carousel-item active">
+                    <img
+                      src="assets/img/senam bersama (3).JPG"
+                      class="d-block w-100 object-fit-cover"
+                      style="height: 250px"
+                      alt="Senam 3"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/senam bersama (4).JPG"
+                      class="d-block w-100 object-fit-cover"
+                      style="height: 250px"
+                      alt="Senam 4"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselKegiatan3"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselKegiatan3"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <div class="card-body text-center bg-white">
+                <h5 class="card-title fw-bold text-success mb-0">
+                  Senam Bersama
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="mt-3">
+              <small class="d-block text-white-50 mb-1"
+                >Dikembangkan oleh Kolaborasi:</small
+              >
+              <small class="fw-semibold d-block">
+                • UPN "Veteran" Yogyakarta<br />
+                • Universitas Gadjah Mada
+              </small>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Alamat</h5>
+
+            <p>
+              Glonggong<br />
+              Bumiharjo, Kecamatan Kemalang<br />
+              Kabupaten Klaten, Jawa Tengah 57484
+            </p>
+          </div>
+
+          <div class="col-md-4">
+            <h5>Kontak</h5>
+
+            <p>+62 856-4304-3970 (Pak Tuwuh)</p>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="text-center">© 2026</div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <button id="btnTop" class="btn-top">↑</button>
+
+    <script src="js/script.js"></script>
+    <script>
+      // Mengambil URL halaman saat ini untuk keperluan Share
+      const currentUrl = encodeURIComponent(window.location.href);
+      const shareTitle = encodeURIComponent("Cek artikel desa yang menarik ini!");
+
+      // Mengatur link share secara dinamis
+      document.querySelectorAll('.share-wa').forEach(el => {
+        el.href = `https://wa.me/?text=${shareTitle}%20${currentUrl}`;
+      });
+      
+      document.querySelectorAll('.share-fb').forEach(el => {
+        el.href = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+      });
+
+      document.querySelectorAll('.share-x').forEach(el => {
+        el.href = `https://twitter.com/intent/tweet?url=${currentUrl}&text=${shareTitle}`;
+      });
+
+      // Fungsi Copy Link
+      function copyArticleLink() {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          alert("Tautan artikel berhasil disalin!");
+        }).catch(err => {
+          alert("Gagal menyalin tautan.");
+        });
+      }
+
+      // Fungsi Share Instagram (Fallback)
+      function shareToInstagram() {
+        alert("Instagram tidak mendukung share link via web secara langsung. Tautan akan disalin, silakan bagikan secara manual di bio atau story Instagram Anda.");
+        copyArticleLink();
+      }
+
+      // Fungsi Toggle Like (Suka)
+      function toggleLike(button) {
+        const icon = button.querySelector('i');
+        const countSpan = button.querySelector('.like-count');
+        let count = parseInt(countSpan.innerText);
+
+        if (icon.classList.contains('bi-heart')) {
+          // Jika di-like
+          icon.classList.replace('bi-heart', 'bi-heart-fill');
+          button.classList.replace('btn-outline-danger', 'btn-danger');
+          countSpan.innerText = count + 1;
+        } else {
+          // Jika batal like
+          icon.classList.replace('bi-heart-fill', 'bi-heart');
+          button.classList.replace('btn-danger', 'btn-outline-danger');
+          countSpan.innerText = count - 1;
+        }
+      }
+
+      // Fungsi Dummy untuk Menambah Komentar
+      function postComment(button) {
+        const input = button.previousElementSibling;
+        const commentText = input.value.trim();
+        
+        if (commentText !== "") {
+          const list = button.closest('.komentar-section').querySelector('.komentar-list');
+          
+          const newComment = document.createElement('div');
+          newComment.className = "mb-2 pb-2 border-bottom";
+          newComment.innerHTML = `<strong class="text-dark">Pengunjung</strong>: ${commentText}`;
+          
+          // Menambahkan komentar di urutan teratas
+          list.prepend(newComment);
+          input.value = ""; // Kosongkan input setelah kirim
+        } else {
+          alert("Komentar tidak boleh kosong!");
+        }
+      }
+    </script>
+  </body>
+</html>
