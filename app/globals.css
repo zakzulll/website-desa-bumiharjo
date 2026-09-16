@@ -5,7 +5,7 @@
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/img/balai-desa.jpeg') center center;
   background-size: cover;
   padding: 150px 0 100px 0; /* Memberi ruang agar tidak tertutup navbar */
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   color: white; /* Mengubah semua teks di dalam hero menjadi putih */
