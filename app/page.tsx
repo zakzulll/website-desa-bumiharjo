@@ -74,10 +74,10 @@ export default function HomePage() {
           <div className="collapse navbar-collapse d-lg-flex" id="navbarProdusi">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link" href="/">Beranda</a>
+                <a className="nav-link active" href="/">Beranda</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" href="/profil">Profil</a>
+                <a className="nav-link" href="/profil">Profil</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/peta">Peta</a>
