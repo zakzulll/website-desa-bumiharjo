@@ -46,27 +46,64 @@ export default function HomePage() {
 
   return (
     <>
-      {/* NAVBAR */}
+      {/* NAVBAR LENGKAP */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-success fixed-top shadow-sm">
         <div className="container">
-          <Link className="navbar-brand d-flex align-items-center gap-2" href="/">
-            <img src="/assets/img/logo-klaten.png" alt="Logo Kabupaten Klaten" height="42" className="d-inline-block align-text-top" />
+          {/* Bagian Kiri: Logo & Judul */}
+          <a className="navbar-brand d-flex align-items-center gap-2" href="/">
+            <img 
+              src="/assets/img/logo-klaten.png" 
+              alt="Logo Kabupaten Klaten" 
+              style={{ height: "42px", width: "auto", objectFit: "contain" }} 
+              className="d-inline-block align-text-top" 
+            />
             <div className="d-flex flex-column">
               <span className="fw-bold text-uppercase lh-1 fs-5">Desa Bumiharjo</span>
-              <span className="text-white-50" style={{ fontSize: "0.68rem", letterSpacing: "0.5px" }}>KECAMATAN KEMALANG</span>
+              <span className="text-white-50" style={{ fontSize: "0.68rem", letterSpacing: "0.5px" }}>
+                KECAMATAN KEMALANG
+              </span>
             </div>
-          </Link>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarProdusi">
+          </a>
+
+          {/* Tombol Hamburger (Untuk versi HP) */}
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarProdusi" aria-controls="navbarProdusi" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarProdusi">
+
+          {/* Bagian Kanan: Menu Navigasi */}
+          <div className="collapse navbar-collapse d-lg-flex" id="navbarProdusi">
             <ul className="navbar-nav ms-auto">
-              <li className="nav-item"><Link className="nav-link active" href="/">Beranda</Link></li>
-              <li className="nav-item"><Link className="nav-link" href="/profil">Profil</Link></li>
-              <li className="nav-item"><Link className="nav-link" href="/peta">Peta</Link></li>
-              <li className="nav-item"><Link className="nav-link" href="/fasilitas">Fasilitas</Link></li>
-              <li className="nav-item"><Link className="nav-link" href="/potensi">Potensi</Link></li>
-              <li className="nav-item"><Link className="nav-link" href="/kontak">Kontak</Link></li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">Beranda</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" href="/profil">Profil</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/peta">Peta</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/fasilitas">Fasilitas</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/potensi">Potensi</a>
+              </li>
+
+              {/* Menu Dropdown Informasi */}
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#" id="informasiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Informasi
+                </a>
+                <ul className="dropdown-menu dropdown-menu-end border-0 shadow" aria-labelledby="informasiDropdown">
+                  <li><a className="dropdown-item" href="/umkm">UMKM</a></li>
+                  <li><a className="dropdown-item" href="/informasi">Artikel & Galeri</a></li>
+                  <li><a className="dropdown-item" href="/apbdesa">APBDesa</a></li>
+                </ul>
+              </li>
+
+              <li className="nav-item">
+                <a className="nav-link" href="/kontak">Kontak</a>
+              </li>
             </ul>
           </div>
         </div>
