@@ -27,7 +27,7 @@ export default function LoginPage() {
       setLoading(false);
     } else {
       // Jika berhasil login, arahkan ke halaman admin
-      router.push("/admin");
+      router.push("/admin/profil");
     }
   };
 
