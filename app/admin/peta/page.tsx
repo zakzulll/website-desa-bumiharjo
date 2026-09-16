@@ -243,7 +243,6 @@ export default function AdminPetaPage() {
                   <li><Link href="/admin/apb" className="nav-link">APB Desa</Link></li>
                 </ul>
               </li>
-              <li className="nav-item"><Link href="/admin/kontak" className="nav-link">Kontak</Link></li>
             </ul>
           </div>
 
