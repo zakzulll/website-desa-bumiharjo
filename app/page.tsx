@@ -110,10 +110,10 @@ export default function HomePage() {
       </nav>
 
       {/* HERO SECTION */}
-      <section className="hero bg-light py-5 mt-5">
-        <div className="container text-center py-5">
+      <section className="hero">
+        <div className="container text-center">
           <h1 className="fw-bold">Website Profil Desa Bumiharjo</h1>
-          <p className="lead mx-auto" style={{ maxWidth: "800px" }}>
+          <p className="lead mx-auto mt-3" style={{ maxWidth: "800px" }}>
             Selamat datang di Website Profil Desa Bumiharjo, Kecamatan Kemalang, Kabupaten Klaten, Jawa Tengah. Website ini menyediakan informasi mengenai profil desa, potensi, fasilitas, UMKM, peta wilayah, serta informasi lainnya yang dapat diakses oleh masyarakat.
           </p>
           <div className="hero-btn mt-4">
