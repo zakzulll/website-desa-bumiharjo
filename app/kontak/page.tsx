@@ -60,7 +60,7 @@ export default function KontakPage() {
                 <a className="nav-link" href="/">Beranda</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" href="/profil">Profil</a>
+                <a className="nav-link" href="/profil">Profil</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/peta">Peta</a>
@@ -85,7 +85,7 @@ export default function KontakPage() {
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="/kontak">Kontak</a>
+                <a className="nav-link active" href="/kontak">Kontak</a>
               </li>
             </ul>
           </div>
@@ -133,38 +133,25 @@ export default function KontakPage() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-dark text-white py-4 mt-5">
+     {/* FOOTER */}
+      <footer>
         <div className="container">
-          <div className="row text-center text-md-start">
-            <div className="col-md-4 mb-3">
-              <div className="mt-3">
-                <small className="d-block text-white-50 mb-1">Dikembangkan oleh Kolaborasi:</small>
-                <small className="fw-semibold d-block">
-                  • UPN "Veteran" Yogyakarta<br />
-                  • Universitas Gadjah Mada
-                </small>
-              </div>
+          <div className="row">
+            <div className="col-md-4">
+              <small className="d-block text-white-50 mb-1">Dikembangkan oleh Kolaborasi:</small>
+              <small className="fw-semibold d-block">• UPN "Veteran" Yogyakarta<br />• Universitas Gadjah Mada</small>
             </div>
-
-            <div className="col-md-4 mb-3">
+            <div className="col-md-4">
               <h5>Alamat</h5>
-              <p className="small text-white-50">
-                Glonggong<br />
-                Bumiharjo, Kecamatan Kemalang<br />
-                Kabupaten Klaten, Jawa Tengah 57484
-              </p>
+              <p>Glonggong<br />Bumiharjo, Kecamatan Kemalang<br />Kabupaten Klaten, Jawa Tengah 57484</p>
             </div>
-
-            <div className="col-md-4 mb-3">
+            <div className="col-md-4">
               <h5>Kontak</h5>
-              <p className="small text-white-50">+62 856-4304-3970 (Pak Tuwuh)</p>
+              <p>+62 856-4304-3970 (Pak Tuwuh)</p>
             </div>
           </div>
-
-          <hr className="border-secondary" />
-
-          <div className="text-center small text-white-50">© 2026</div>
+          <hr />
+          <div className="text-center">© 2026</div>
         </div>
       </footer>
 
