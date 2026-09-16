@@ -198,7 +198,6 @@ export default function AdminAPBPage() {
                   <li><Link href="/admin/apb" className="nav-link active">APB Desa</Link></li>
                 </ul>
               </li>
-              <li className="nav-item"><Link href="/admin/kontak" className="nav-link">Kontak</Link></li>
             </ul>
           </div>
           <div className="mt-auto p-3 mb-2">
