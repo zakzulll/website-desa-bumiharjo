@@ -112,9 +112,9 @@ export default function HomePage() {
       {/* HERO SECTION */}
       <section className="hero">
         <div className="container text-center">
-          <h1 className="fw-bold">Website Profil Desa Bumiharjo</h1>
+          <h1 className="fw-bold">Website Desa Bumiharjo</h1>
           <p className="lead mx-auto mt-3" style={{ maxWidth: "800px" }}>
-            Selamat datang di Website Profil Desa Bumiharjo, Kecamatan Kemalang, Kabupaten Klaten, Jawa Tengah. Website ini menyediakan informasi mengenai profil desa, potensi, fasilitas, UMKM, peta wilayah, serta informasi lainnya yang dapat diakses oleh masyarakat.
+            Selamat datang di Website Desa Bumiharjo, Kecamatan Kemalang, Kabupaten Klaten, Jawa Tengah. Website ini menyediakan informasi mengenai profil desa, potensi, fasilitas, UMKM, peta wilayah, serta informasi lainnya yang dapat diakses oleh masyarakat.
           </p>
           <div className="hero-btn mt-4">
             <Link href="/profil" className="btn btn-success btn-lg me-2">Profil Desa</Link>
@@ -197,8 +197,9 @@ export default function HomePage() {
                   <div className="col-md-8 text-center text-md-start">
                     <p className="fst-italic text-secondary" style={{ textAlign: "justify" }}>
                       Assalamu'Alaikum Warahmatullahi Wabarakatuh.<br /><br />
-                      Website ini hadir sebagai wujud transformasi Desa Bumiharjo menjadi desa yang mampu memanfaatkan teknologi informasi... 
-                      (Lanjutan sambutan dapat diatur melalui dashboard admin).
+                      Website ini hadir sebagai wujud transformasi Desa Bumiharjo menjadi desa yang mampu memanfaatkan teknologi informasi dan komunikasi yang terintegrasi ke dalam sistem online. Kehadiran platform ini merupakan komitmen kami dalam mendorong keterbukaan informasi publik, meningkatkan kualitas pelayanan publik, serta menggerakkan kegiatan perekonomian di desa. Melalui inovasi ini, kami berharap dapat mewujudkan Desa Bumiharjo sebagai desa wisata yang berkelanjutan, adaptif dan tanggap terhadap mitigasi perubahan iklim, serta tumbuh menjadi desa yang mandiri..<br /><br />
+                      Terima kasih yang sebesar-besarnya kami sampaikan kepada semua pihak yang telah banyak memberikan dukungan dan kontribusi, baik berupa tenaga, pikiran, maupun semangat, sehingga website resmi Desa Bumiharjo ini dapat terealisasi dengan baik..<br /><br />
+                      Wassalamu'Alaikum Warahmatullahi Wabarakatuh..<br /><br />
                     </p>
                   </div>
                 </div>
