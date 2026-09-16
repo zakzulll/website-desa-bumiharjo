@@ -4,7 +4,6 @@
   /* Pastikan nama file gambar dan ekstensinya sesuai dengan yang ada di folder public/assets/img/ */
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/img/balai-desa.jpeg') center center;
   background-size: cover;
-  padding: 150px 0 100px 0; /* Memberi ruang agar tidak tertutup navbar */
   min-height: 100vh;
   display: flex;
   align-items: center;
