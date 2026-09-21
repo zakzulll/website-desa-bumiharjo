@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description: "Informasi resmi profil desa, peta wilayah, fasilitas, potensi, UMKM, dan layanan masyarakat Desa Bumiharjo, Kecamatan Kemalang, Kabupaten Klaten, Jawa Tengah.",
   verification: {
     google: "F_5Sx0CD0LT9bbASfBwsSBVHe0aCJPJMUwAmdjG6DBM",
+  },
   keywords: [
     "Desa Bumiharjo", 
     "Bumiharjo Kemalang", 
@@ -30,11 +31,6 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
 });
-
-export const metadata = {
-  title: "Website Desa Bumiharjo",
-  description: "Profil dan Potensi Desa Bumiharjo",
-};
 
 export default function RootLayout({
   children,
