@@ -6,6 +6,8 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Website Resmi Desa Bumiharjo - Kecamatan Kemalang, Kabupaten Klaten",
   description: "Informasi resmi profil desa, peta wilayah, fasilitas, potensi, UMKM, dan layanan masyarakat Desa Bumiharjo, Kecamatan Kemalang, Kabupaten Klaten, Jawa Tengah.",
+  verification: {
+    google: "F_5Sx0CD0LT9bbASfBwsSBVHe0aCJPJMUwAmdjG6DBM",
   keywords: [
     "Desa Bumiharjo", 
     "Bumiharjo Kemalang", 
@@ -47,7 +49,6 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
           rel="stylesheet" 
         />
-        <meta name="google-site-verification" content="F_5Sx0CD0LT9bbASfBwsSBVHe0aCJPJMUwAmdjG6DBM" />
       </head>
       {/* 2. Terapkan class font poppins langsung ke body */}
       <body className={poppins.className}>
