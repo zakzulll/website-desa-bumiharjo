@@ -1,6 +1,27 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Website Resmi Desa Bumiharjo - Kecamatan Kemalang, Kabupaten Klaten",
+  description: "Informasi resmi profil desa, peta wilayah, fasilitas, potensi, UMKM, dan layanan masyarakat Desa Bumiharjo, Kecamatan Kemalang, Kabupaten Klaten, Jawa Tengah.",
+  keywords: [
+    "Desa Bumiharjo", 
+    "Bumiharjo Kemalang", 
+    "Bumiharjo Klaten", 
+    "Profil Desa Bumiharjo",
+    "Kantor Desa Bumiharjo"
+  ],
+  openGraph: {
+    title: "Website Resmi Desa Bumiharjo",
+    description: "Portal informasi resmi masyarakat Desa Bumiharjo, Kemalang, Klaten.",
+    url: "https://website-desa-bumiharjo.vercel.app",
+    siteName: "Desa Bumiharjo",
+    locale: "id_ID",
+    type: "website",
+  },
+};
 
 // 1. Konfigurasi Font Poppins bawaan Next.js
 const poppins = Poppins({
