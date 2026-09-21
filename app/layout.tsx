@@ -47,6 +47,7 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
           rel="stylesheet" 
         />
+        <meta name="google-site-verification" content="F_5Sx0CD0LT9bbASfBwsSBVHe0aCJPJMUwAmdjG6DBM" />
       </head>
       {/* 2. Terapkan class font poppins langsung ke body */}
       <body className={poppins.className}>
